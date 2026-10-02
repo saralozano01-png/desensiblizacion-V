@@ -1,0 +1,7 @@
+{
+  "name": "¿TODAVÍA TE SENSIBILIZA?",
+  "description": "Blog experimental e investigación visual sobre la pérdida de sensibilidad frente a la violencia y el consumo ininterrumpido de imágenes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Bebas Neue', Impact, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Swatch colors from reference image */
+  --color-ice: #DFE4EA;
+  --color-slate-soft: #BDC6CE;
+  --color-slate: #7D878F;
+  --color-slate-navy: #3D4750;
+  --color-dark-base: #161B20;
+  --color-dark-card: #20262D;
+  --color-obsidian: #2F3339;
+  --color-gunmetal: #41474F;
+  --color-taupe: #8C888B;
+  --color-cement: #A4A7A9;
+  --color-oxblood: #421115;
+  --color-crimson: #8B191F;
+  --color-crimson-bright: #9E1B23;
+  --color-olive: #889826;
+
+  /* Semantic mappings */
+  --color-alert-red: #8B191F;
+  --color-alert-red-dark: #421115;
+  --color-dark-bg: #161B20;
+  --color-dark-surface: #1C2228;
+  --color-dark-card: #222830;
+  --color-dark-border: #3D4750;
+}
+
+/* Custom Film Grain and CRT Scanlines */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+@keyframes eyeFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes pupilPulse {
+  0%, 100% {
+    transform: scale(1);
+    transform-origin: 50px 32.5px;
+  }
+  50% {
+    transform: scale(1.22);
+    transform-origin: 50px 32.5px;
+  }
+}
+
+@keyframes slashTwitch {
+  0%, 92%, 100% {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: drop-shadow(0 0 0 rgba(139, 25, 31, 0));
+  }
+  93% {
+    opacity: 0.6;
+    transform: translate(-2px, 1px);
+    filter: drop-shadow(0 0 8px rgba(139, 25, 31, 0.8));
+  }
+  95% {
+    opacity: 1;
+    transform: translate(2px, -1px);
+    filter: drop-shadow(0 0 12px rgba(158, 27, 35, 1));
+  }
+  97% {
+    opacity: 0.8;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scanlineMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes buttonPulseRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(223, 228, 234, 0.4), 0 0 0 0 rgba(139, 25, 31, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(223, 228, 234, 0), 0 0 0 20px rgba(139, 25, 31, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(223, 228, 234, 0), 0 0 0 0 rgba(139, 25, 31, 0);
+  }
+}
+
+@keyframes textGlitchSubtle {
+  0%, 94%, 100% {
+    text-shadow: 0 0 0 transparent;
+    transform: translate(0);
+  }
+  95% {
+    text-shadow: -2px 0 #8B191F, 2px 0 #DFE4EA;
+    transform: translate(-1px, 1px);
+  }
+  97% {
+    text-shadow: 2px 0 #8B191F, -1px 0 #DFE4EA;
+    transform: translate(1px, -1px);
+  }
+  99% {
+    text-shadow: 0 0 0 transparent;
+    transform: translate(0);
+  }
+}
+
+.animate-eye-float {
+  animation: eyeFloat 4.5s ease-in-out infinite;
+}
+
+.animate-pupil {
+  animation: pupilPulse 3s ease-in-out infinite;
+}
+
+.animate-slash-twitch {
+  animation: slashTwitch 3.8s ease-in-out infinite;
+}
+
+.animate-btn-pulse {
+  animation: buttonPulseRing 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.animate-text-glitch {
+  animation: textGlitchSubtle 4s infinite ease-in-out;
+}
+
+.scanlines-animated {
+  background: linear-gradient(
+    to bottom,
+    rgba(223, 228, 234, 0),
+    rgba(223, 228, 234, 0) 50%,
+    rgba(22, 27, 32, 0.4) 50%,
+    rgba(22, 27, 32, 0.4)
+  );
+  background-size: 100% 6px;
+  animation: scanlineMove 12s linear infinite;
+}
+
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(223, 228, 234, 0),
+    rgba(223, 228, 234, 0) 50%,
+    rgba(22, 27, 32, 0.45) 50%,
+    rgba(22, 27, 32, 0.45)
+  );
+  background-size: 100% 4px;
+}
+
+/* Redaction Bars */
+.redacted-block {
+  background-color: #161B20;
+  color: transparent;
+  user-select: none;
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 0 4px;
+  border-radius: 1px;
+  line-height: 1.1;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.redacted-block:hover {
+  background-color: #2F3339;
+  color: #8B191F;
+}
+
+/* Warning flicker and twitch animations */
+@keyframes warningFlickerFast {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 1; }
+  50% { opacity: 0.15; }
+  55% { opacity: 1; }
+  85% { opacity: 1; }
+  90% { opacity: 0.3; }
+}
+
+@keyframes warningFlickerSlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes alertPulseGlow {
+  0%, 100% { border-color: #8B191F; box-shadow: 0 0 0 0 rgba(139, 25, 31, 0); }
+  50% { border-color: #9E1B23; box-shadow: 0 0 15px rgba(139, 25, 31, 0.45); }
+}
+
+@keyframes glitchShift {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.animate-warning-fast {
+  animation: warningFlickerFast 2.4s infinite;
+}
+
+.animate-warning-slow {
+  animation: warningFlickerSlow 1.8s infinite ease-in-out;
+}
+
+.animate-glitch {
+  animation: glitchShift 0.35s infinite ease-in-out alternate;
+}
+
+.animate-alert-pulse {
+  animation: alertPulseGlow 2s infinite ease-in-out;
+}
