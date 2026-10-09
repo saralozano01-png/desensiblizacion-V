@@ -1,3 +1,8 @@
+import articleViolenceContent from '../assets/images/article_violence_content.png';
+import articleVisibilityMap from '../assets/images/article_visibility_map.png';
+import articlePsychicNumbing from '../assets/images/article_psychic_numbing.png';
+import articleCivilPhotography from '../assets/images/article_civil_photography.png';
+import articleMorbidCuriosity from '../assets/images/article_morbid_curiosity.png';
 export interface BlogArticle {
   id: string;
   postNumber: string;
@@ -104,8 +109,8 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     subtitle: 'La violencia no desaparece cuando se censura: también cambia cuando se convierte en entretenimiento algorítmico y meme.',
     readTime: '6 min de lectura',
     author: 'Investigación Académica',
-    coverImage: '/src/assets/images/feed_police_perimeter_1790905676177.jpg',
-    coverCaption: 'Evidencia documental de operativo policial en redes sociales: el dolor humano indexado como mercancía de dwell time.',
+    coverImage: articleViolenceContent,
+    coverCaption: 'La interfaz de red convierte la violencia en una publicación compartible y desplaza el contexto de quienes la observan.',
     tags: ['Instagram', 'Memes', 'CBS News', 'Algoritmos', 'Martha Rosler'],
     keyTheorists: ['Martha Rosler', 'E. Morales (2025)', 'Nicklin et al. (2020)'],
     summary: 'Una investigación de CBS News reveló cientos de cuentas en Instagram dedicadas a compartir peleas, agresiones, accidentes y muertes reales combinadas con canciones de moda, audios cómicos y formato de meme. ¿Qué ocurre cuando el dolor ajeno se consume en la misma franja de scroll que una receta de cocina?',
@@ -155,8 +160,8 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     subtitle: 'Censura algorítmica vs. control institucional: la intervención material sobre la mirada.',
     readTime: '7 min de lectura',
     author: 'Investigación Académica',
-    coverImage: '/src/assets/images/censored_crt_monitors_1790905711966.jpg',
-    coverCaption: 'Pared de monitores de control: la visibilidad es siempre el resultado de una disputa de poder.',
+    coverImage: articleVisibilityMap,
+    coverCaption: 'Un mapa visual de símbolos conectados: lo que circula en pantalla también organiza la forma en que miramos.',
     tags: ['Mapa Conceptual', 'Visibilidad', 'Censura Algorítmica', 'Control Institucional', 'Sensibilidad'],
     keyTheorists: ['Judith Butler', 'Stanley Cohen', 'Ariella Azoulay'],
     summary: 'A través de nuestro mapa conceptual analizamos los cuatro ejes que definen la visibilidad contemporánea: Censura (material y algorítmica), Exposición (repetición y viralidad), Representación (framing de la víctima) y Comunidad (consumo activo vs. pasivo).',
@@ -201,8 +206,8 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     subtitle: 'Judith Butler, Paul Slovic y los marcos que determinan qué vidas son dignas de duelo.',
     readTime: '8 min de lectura',
     author: 'Investigación Académica',
-    coverImage: '/src/assets/images/commuters_screen_glow_1790902305889.jpg',
-    coverCaption: 'Miradas desvinculadas: la estadística satura la mente y apaga la capacidad de llorar la pérdida ajena.',
+    coverImage: articlePsychicNumbing,
+    coverCaption: 'La mente recibe señales de violencia y entretenimiento en el mismo circuito de consumo digital.',
     tags: ['Judith Butler', 'Paul Slovic', 'Psychic Numbing', 'Framing', 'Compassion Fade'],
     keyTheorists: ['Judith Butler (2009)', 'Paul Slovic (2007, 2017)', 'Thomas et al. (2018)'],
     summary: 'Analizamos cómo los marcos mediáticos definen quién es una víctima con rostro y quién es un número anónimo, y cómo el fenómeno del entumecimiento psíquico (Psychic Numbing) estudiado por Slovic demuestra que el corazón humano colapsa cuando se multiplican los cuerpos.',
@@ -247,8 +252,8 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     subtitle: 'Entre la mirada que exige justicia y los estados colectivos de negación cotidiana.',
     readTime: '7 min de lectura',
     author: 'Investigación Académica',
-    coverImage: '/src/assets/images/redacted_archive_dossier_1790902318303.jpg',
-    coverCaption: 'Expediente desclasificado: mirar no es un acto inocente; es un compromiso ético entre ciudadanos.',
+    coverImage: articleCivilPhotography,
+    coverCaption: 'Un rostro fragmentado recuerda que toda fotografía implica una relación ética entre quien mira y quien es visto.',
     tags: ['Susan Sontag', 'Ariella Azoulay', 'Stanley Cohen', 'Contrato Civil', 'Estados de Negación'],
     keyTheorists: ['Susan Sontag (2003)', 'Ariella Azoulay (2008)', 'Stanley Cohen (2001)'],
     summary: 'Examinamos el debate entre la advertencia de Sontag sobre la pasividad del espectador, la propuesta de Azoulay de la fotografía como un contrato ciudadano vinculante, y los mecanismos de negación analizados por Cohen (saber y no saber al mismo tiempo).',
@@ -293,8 +298,8 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     subtitle: 'Suzanne Oosterwijk, Jeanne Funk Brockmyer y los circuitos de recompensa del dolor.',
     readTime: '6 min de lectura',
     author: 'Investigación Académica',
-    coverImage: '/src/assets/images/cctv_empty_intersection_1790902296575.jpg',
-    coverCaption: 'La pantalla como mirilla: la atracción por lo prohibido responde a un mecanismo biológico ancestral.',
+    coverImage: articleMorbidCuriosity,
+    coverCaption: 'La pantalla y el lenguaje de la violencia muestran cómo el consumo repetido puede alterar nuestra sensibilidad.',
     tags: ['Curiosidad Mórbida', 'Suzanne Oosterwijk', 'Neurobiología', 'Funk Brockmyer', 'Desensibilización'],
     keyTheorists: ['Suzanne Oosterwijk (2017, 2020)', 'Jeanne Funk Brockmyer (2022)'],
     summary: '¿Por qué cuando hay una advertencia de "Contenido Sensible", el impulso inmediato de millones de jóvenes es presionar "Ver ahora"? Oosterwijk demuestra que la curiosidad mórbida activa los circuitos de recompensa del cerebro, mientras Funk Brockmyer describe la atrofia empática por repetición.',

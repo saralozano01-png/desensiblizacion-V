@@ -11,6 +11,7 @@ import { FloatingWarningSystem } from './components/FloatingWarningSystem';
 import { FinalReflection } from './components/FinalReflection';
 import { InitialWarningModal } from './components/InitialWarningModal';
 import { ExitScreen } from './components/ExitScreen';
+import { SensitivityExperience } from './components/SensitivityExperience';
 import { useHabituationTracker } from './hooks/useHabituationTracker';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
   const [redactionsRevealed, setRedactionsRevealed] = useState(0);
   const [secondsElapsed, setSecondsElapsed] = useState(0);
   const [feedInteractions, setFeedInteractions] = useState(0);
+  const [experienceOpen, setExperienceOpen] = useState(false);
 
   // Timer for user dwell time
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function App() {
       }
 
       // Check current section
-      const sections = ['inicio', 'articulos', 'mapa-conceptual', 'feed', 'referentes', 'bibliografia', 'reflexion'];
+      const sections = ['inicio', 'articulos', 'marco-teorico', 'feed', 'referentes', 'bibliografia', 'reflexion'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -130,7 +132,10 @@ export default function App() {
         behaviorLabel={habituationStats.behaviorLabel}
         scrollSpeed={habituationStats.scrollSpeedPxPerSec}
         onNavigate={handleNavigate}
+        onOpenExperience={() => setExperienceOpen(true)}
       />
+
+      {experienceOpen && <SensitivityExperience onClose={() => setExperienceOpen(false)} />}
 
       <main>
         {/* Hero Section */}

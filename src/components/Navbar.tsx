@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Volume2, VolumeX, Menu, X, Radio, Eye, Zap } from 'lucide-react';
+import { Volume2, VolumeX, Menu, X, Radio, Eye, Zap, Play } from 'lucide-react';
 import { soundFx } from '../utils/audio';
 
 interface NavbarProps {
@@ -11,6 +11,7 @@ interface NavbarProps {
   behaviorLabel?: string;
   scrollSpeed?: number;
   onNavigate: (sectionId: string) => void;
+  onOpenExperience: () => void;
 }
 
 export function Navbar({
@@ -21,7 +22,8 @@ export function Navbar({
   habituationBehavior = 'moderate',
   behaviorLabel = 'LECTURA MODERADA',
   scrollSpeed = 0,
-  onNavigate
+  onNavigate,
+  onOpenExperience
 }: NavbarProps) {
   const [audioActive, setAudioActive] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,7 +31,7 @@ export function Navbar({
   const navLinks = [
     { id: 'inicio', label: 'INICIO' },
     { id: 'articulos', label: 'BLOG' },
-    { id: 'mapa-conceptual', label: 'MAPA CONCEPTUAL' },
+    { id: 'marco-teorico', label: 'MARCO TEÓRICO' },
     { id: 'feed', label: 'FEED SOCIAL' },
     { id: 'referentes', label: 'REFERENTES' },
     { id: 'bibliografia', label: 'BIBLIOGRAFÍA' },
@@ -102,6 +104,7 @@ export function Navbar({
               </button>
             );
           })}
+          <button onClick={onOpenExperience} className="flex items-center gap-1.5 border border-[#8B191F] bg-[#421115]/50 px-2 py-1 text-[#DFE4EA] transition-colors hover:bg-[#8B191F]" aria-label="Abrir experiencia interactiva audiovisual"><Play className="h-3 w-3 fill-current"/> EXPERIENCIA</button>
         </nav>
 
         {/* Zone 3: Actions & Live Intelligent Habituation Meter */}
@@ -218,6 +221,7 @@ export function Navbar({
               <span className="text-[10px] text-[#41474F]">→</span>
             </button>
           ))}
+          <button onClick={() => { onOpenExperience(); setMobileMenuOpen(false); }} className="w-full border border-[#8B191F] bg-[#421115]/50 py-2 px-3 text-left text-sm font-mono text-[#DFE4EA]">▶ EXPERIENCIA INTERACTIVA</button>
         </div>
       )}
     </header>
