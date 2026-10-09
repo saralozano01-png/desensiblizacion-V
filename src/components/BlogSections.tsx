@@ -56,7 +56,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           censorBarText="██████████ [IDENTIDAD DE TESTIGOS PROTEGIDA]"
           caption="Fig. 1.1 — La textura del consumo repetido convierte lo sensible en una superficie cotidiana."
           aspectRatio="16:9"
-          initialCensored={false}
+          initialCensored={true}
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -137,7 +137,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             censorBarText="██████████ [TRANSMISIÓN INTERRUMPIDA POR SEÑAL DE ALERTA]"
             caption="Fig. 2.1 — Repetición visual: señales que persisten hasta volverse parte del fondo."
             aspectRatio="16:9"
-            initialCensored={false}
+            initialCensored={true}
           />
         </div>
 
@@ -178,7 +178,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           censorBarText="████████████████ [DOCUMENTO JUDICIAL CLASIFICADO]"
           caption="Fig. 3.1 — La violencia como contenido: una imagen simbólica que evita mostrar daño explícito."
           aspectRatio="16:9"
-          initialCensored={false}
+          initialCensored={true}
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -236,7 +236,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           censorBarText="██████████ [UBICACIÓN GEOGRÁFICA RESERVADA]"
           caption="Mirar sin ver: la imagen permanece, pero la atención puede desplazarse."
           aspectRatio="16:9"
-          initialCensored={false}
+          initialCensored={true}
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -315,7 +315,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
               censorBarText="██████████ [ROSTROS CENSURADOS]"
               caption="Archivo visual 01 — Flor seca como señal de memoria y deterioro."
               aspectRatio="4:3"
-              initialCensored={false}
+              initialCensored={true}
             />
 
             <CensoredMediaCard
@@ -326,7 +326,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
               censorBarText="██████████ [NÚMERO DE PATRULLA RESERVADO]"
               caption="Archivo visual 02 — Fruta intervenida como metáfora de un perímetro sensible."
               aspectRatio="4:3"
-              initialCensored={false}
+              initialCensored={true}
             />
 
             <CensoredMediaCard
@@ -337,7 +337,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
               censorBarText="██████████ [EVIDENCIA OCULTA AL PÚBLICO]"
               caption="Archivo visual 03 — Granada en sombra: registro simbólico de lo que se oculta."
               aspectRatio="4:3"
-              initialCensored={false}
+              initialCensored={true}
             />
 
             <CensoredMediaCard
@@ -348,7 +348,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
               censorBarText="██████████ [DATOS PERSONALES PROTEGIDOS]"
               caption="Archivo visual 04 — Composición abstracta de memoria, exposición y censura."
               aspectRatio="4:3"
-              initialCensored={false}
+              initialCensored={true}
             />
           </div>
         </div>

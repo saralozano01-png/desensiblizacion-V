@@ -2,22 +2,22 @@ import { useMemo, useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Eye, Flag, Heart, MessageSquareWarning, RotateCcw, Settings2, Sparkles, X } from 'lucide-react';
 import { emotionalState, experienceScenes, type Choice } from '../data/sensitivityExperience';
 import experienceCover from '../assets/images/experience_cover.png';
-import roslerSceneOne from '../assets/images/rosler_house_beautiful_01.png';
-import roslerSceneTwo from '../assets/images/rosler_house_beautiful_02.png';
-import roslerSceneThree from '../assets/images/rosler_house_beautiful_03.png';
-import experienceSceneAlgorithm from '../assets/images/experience_scene_algorithm.png';
-import experienceSceneSaturation from '../assets/images/experience_scene_saturation.png';
+import articleViolenceContent from '../assets/images/article_violence_content.png';
+import articleVisibilityMap from '../assets/images/article_visibility_map.png';
+import articlePsychicNumbing from '../assets/images/article_psychic_numbing.png';
+import articleCivilPhotography from '../assets/images/article_civil_photography.png';
+import articleMorbidCuriosity from '../assets/images/article_morbid_curiosity.png';
 import experienceClosing from '../assets/images/experience_closing.png';
 
 type View = 'cover' | 'instructions' | 'scene' | 'feedback' | 'result' | 'tips' | 'closing';
 const faces = ['☺', '🙂', '😐', '☹', '☹'];
 const labels = ['Estado narrativo: apertura', 'Estado narrativo: atención', 'Estado narrativo: pausa', 'Estado narrativo: inquietud', 'Estado narrativo: alerta'];
 const sceneMedia = [
-  { src: roslerSceneOne, alt: 'Obra de Martha Rosler que superpone una sala doméstica y presencia militar.', credit: 'Martha Rosler · House Beautiful: Bringing the War Home' },
-  { src: roslerSceneTwo, alt: 'Obra de Martha Rosler que contrasta un interior doméstico con una escena de guerra.', credit: 'Martha Rosler · House Beautiful: Bringing the War Home' },
-  { src: roslerSceneThree, alt: 'Obra de Martha Rosler que vincula el descanso doméstico con un escenario de conflicto.', credit: 'Martha Rosler · House Beautiful: Bringing the War Home' },
-  { src: experienceSceneAlgorithm, alt: 'Televisor ilustrado como símbolo de recomendaciones invasivas.', credit: 'Escena de la experiencia interactiva' },
-  { src: experienceSceneSaturation, alt: 'Persona agotada frente a un portátil.', credit: 'Escena de la experiencia interactiva' }
+  { src: articleViolenceContent, alt: 'Ilustración sobre violencia convertida en contenido para redes.', credit: 'Escena 01 · Contenido y viralidad' },
+  { src: articleVisibilityMap, alt: 'Ilustración sobre filtros y visibilidad en plataformas digitales.', credit: 'Escena 02 · Visibilidad y moderación' },
+  { src: articlePsychicNumbing, alt: 'Ilustración sobre exposición repetida y entumecimiento psíquico.', credit: 'Escena 03 · Repetición y respuesta afectiva' },
+  { src: articleCivilPhotography, alt: 'Imagen conceptual sobre fotografía, mirada y responsabilidad.', credit: 'Escena 04 · La ética de mirar' },
+  { src: articleMorbidCuriosity, alt: 'Imagen conceptual sobre curiosidad mórbida y consumo de contenido.', credit: 'Escena 05 · Curiosidad y hábito digital' }
 ];
 
 export function SensitivityExperience({ onClose }: { onClose: () => void }) {

@@ -4,6 +4,15 @@ import { blogArticlesChronologicalReverse } from '../data/blogArticles';
 import { InteractiveRedaction } from './InteractiveRedaction';
 import { CensoredMediaCard } from './CensoredMediaCard';
 import { soundFx } from '../utils/audio';
+import roslerWorkOne from '../assets/images/rosler_house_beautiful_01.png';
+import roslerWorkTwo from '../assets/images/rosler_house_beautiful_02.png';
+import roslerWorkThree from '../assets/images/rosler_house_beautiful_03.png';
+
+const academicWorks = [
+  { src: roslerWorkOne, alt: 'Obra de Martha Rosler con interior doméstico y presencia militar.', label: 'Obra 01 · Interior, conflicto y distancia' },
+  { src: roslerWorkTwo, alt: 'Obra de Martha Rosler con interior doméstico y escena de guerra.', label: 'Obra 02 · La guerra entra a la sala' },
+  { src: roslerWorkThree, alt: 'Obra de Martha Rosler con una figura reclinada ante un escenario de conflicto.', label: 'Obra 03 · Descanso, medios y violencia' }
+];
 
 interface BlogTimelineProps {
   onArticleRead: () => void;
@@ -43,13 +52,27 @@ export function BlogTimeline({ onArticleRead, onRedactionReveal }: BlogTimelineP
         </div>
 
         <h2 className="text-4xl sm:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA] leading-none">
-          ARCHIVOS DEL SUFRIMIENTO MEDIADO
+          PUNTO DE PARTIDA ACADÉMICO
         </h2>
 
         <p className="font-sans text-sm sm:text-base text-[#BDC6CE] max-w-2xl mt-3 leading-relaxed">
-          Profundizaciones opcionales para conectar cada eje del recorrido con investigaciones y autores. Abre únicamente el artículo que quieras consultar.
+          Cinco artículos de investigación para iniciar el recorrido. Sus imágenes académicas se presentan completas; abre solo el análisis que quieras profundizar.
         </p>
       </div>
+
+      <section aria-label="Obras académicas de Martha Rosler" className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {academicWorks.map((work) => (
+          <figure key={work.label} className="overflow-hidden border border-[#3D4750] bg-[#0d1013]">
+            <div className="aspect-4/3 flex items-center justify-center">
+              <img src={work.src} alt={work.alt} className="h-full w-full object-contain" />
+            </div>
+            <figcaption className="border-t border-[#2F3339] bg-[#1C2228] px-3 py-2 font-mono text-[11px] text-[#BDC6CE]">
+              Martha Rosler · <span className="italic">House Beautiful: Bringing the War Home</span><br />
+              <span className="text-[#7D878F]">{work.label}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </section>
 
       {/* Chronological Reverse Articles Stream */}
       <div className="space-y-16">
@@ -83,21 +106,6 @@ export function BlogTimeline({ onArticleRead, onRedactionReveal }: BlogTimelineP
                 </div>
               </div>
 
-              {/* Cover Media Card */}
-              {article.coverImage && (
-                <div className="p-4 sm:p-6 pb-0">
-                  <CensoredMediaCard
-                    imageSrc={article.coverImage}
-                    altText={article.title}
-                    caseCode={`EXP-${article.id.toUpperCase()}`}
-                    title={article.tags[0]}
-                    censorBarText="██████████ [DOCUMENTO CLASIFICADO BAJO INVESTIGACIÓN]"
-                    caption={article.coverCaption}
-                    aspectRatio="16:9"
-                    initialCensored={false}
-                  />
-                </div>
-              )}
 
               {/* Article Header & Summary */}
               <div className="p-4 sm:p-6 space-y-4">

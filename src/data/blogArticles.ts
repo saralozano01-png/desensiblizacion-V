@@ -1,8 +1,3 @@
-import articleViolenceContent from '../assets/images/article_violence_content.png';
-import articleVisibilityMap from '../assets/images/article_visibility_map.png';
-import articlePsychicNumbing from '../assets/images/article_psychic_numbing.png';
-import articleCivilPhotography from '../assets/images/article_civil_photography.png';
-import articleMorbidCuriosity from '../assets/images/article_morbid_curiosity.png';
 export interface BlogArticle {
   id: string;
   postNumber: string;
@@ -105,7 +100,6 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     category: 'INVESTIGACIÓN MEDIÁTICA & VIRALIDAD',
     title: 'CUANDO LA VIOLENCIA SE CONVIERTE EN CONTENIDO: Instagram y la normalización de imágenes reales de sufrimiento',
     subtitle: 'Cuando el dolor ajeno se mezcla con memes, música y recomendaciones.', readTime: '3 min de lectura', author: 'Investigación Académica',
-    coverImage: articleViolenceContent, coverCaption: 'La interfaz transforma la violencia en una publicación compartible y borra su contexto.',
     tags: ['Instagram', 'Memes', 'CBS News', 'Algoritmos', 'Martha Rosler'], keyTheorists: ['Martha Rosler', 'E. Morales (2025)', 'Nicklin et al. (2020)'],
     summary: 'Cuentas que difunden violencia real la insertan entre contenido cotidiano. El scroll convierte un hecho grave en un estímulo más.',
     contentHtml: {
@@ -121,7 +115,6 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     id: 'art-04', postNumber: 'ENTRADA #04', date: '28 de Septiembre, 2026 · 14:15 hrs', category: 'ARQUITECTURA VISUAL',
     title: 'EL MAPA DE LA VISIBILIDAD: ¿Quién decide qué merece ser visto en el espacio digital?',
     subtitle: 'Censura, exposición y encuadre: fuerzas que organizan la mirada.', readTime: '3 min de lectura', author: 'Investigación Académica',
-    coverImage: articleVisibilityMap, coverCaption: 'Lo que circula en pantalla también organiza la forma en que miramos.',
     tags: ['Visibilidad', 'Censura Algorítmica', 'Control Institucional', 'Sensibilidad'], keyTheorists: ['Judith Butler', 'Stanley Cohen', 'Ariella Azoulay'],
     summary: 'La visibilidad digital no es neutral: plataformas, instituciones y comunidades deciden qué aparece, cuánto se repite y cómo se interpreta.',
     contentHtml: {
@@ -137,7 +130,6 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     id: 'art-03', postNumber: 'ENTRADA #03', date: '24 de Septiembre, 2026 · 11:00 hrs', category: 'TEORÍA CRÍTICA & PSICOLOGÍA COGNITIVA',
     title: 'FRAMES OF WAR Y PSYCHIC NUMBING: Por qué una sola muerte conmueve y un millón se vuelve estadística',
     subtitle: 'Butler y Slovic explican por qué algunos dolores se vuelven visibles.', readTime: '3 min de lectura', author: 'Investigación Académica',
-    coverImage: articlePsychicNumbing, coverCaption: 'La mente recibe violencia y entretenimiento dentro del mismo flujo digital.',
     tags: ['Judith Butler', 'Paul Slovic', 'Psychic Numbing', 'Framing', 'Compassion Fade'], keyTheorists: ['Judith Butler (2009)', 'Paul Slovic (2007, 2017)', 'Thomas et al. (2018)'],
     summary: 'Los marcos mediáticos dan rostro a unas víctimas y reducen otras a cifras. Al crecer la escala del dolor, la empatía puede apagarse.',
     contentHtml: {
@@ -153,7 +145,6 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     id: 'art-02', postNumber: 'ENTRADA #02', date: '19 de Septiembre, 2026 · 17:40 hrs', category: 'FILOSOFÍA VISUAL & DERECHOS CIVILES',
     title: 'EL CONTRATO CIVIL DE LA FOTOGRAFÍA: Susan Sontag, Ariella Azoulay y Stanley Cohen',
     subtitle: 'Mirar una fotografía también implica una decisión ética.', readTime: '3 min de lectura', author: 'Investigación Académica',
-    coverImage: articleCivilPhotography, coverCaption: 'Toda fotografía crea una relación ética entre quien mira y quien es visto.',
     tags: ['Susan Sontag', 'Ariella Azoulay', 'Stanley Cohen', 'Contrato Civil', 'Estados de Negación'], keyTheorists: ['Susan Sontag (2003)', 'Ariella Azoulay (2008)', 'Stanley Cohen (2001)'],
     summary: 'Sontag advierte sobre la pasividad; Azoulay propone una responsabilidad ciudadana; Cohen explica cómo sabemos y, aun así, evitamos actuar.',
     contentHtml: {
@@ -169,7 +160,6 @@ export const blogArticlesChronologicalReverse: BlogArticle[] = [
     id: 'art-01', postNumber: 'ENTRADA #01 (FUNDACIONAL)', date: '12 de Septiembre, 2026 · 09:15 hrs', category: 'NEUROPSICOLOGÍA & CONDUCTA DIGITAL',
     title: 'LA CURIOSIDAD MÓRBIDA Y EL UMBRAL DEL CONSUMO: ¿Por qué buscamos voluntariamente lo perturbador?',
     subtitle: 'Curiosidad, advertencias y repetición: el circuito del consumo sensible.', readTime: '3 min de lectura', author: 'Investigación Académica',
-    coverImage: articleMorbidCuriosity, coverCaption: 'El consumo repetido puede alterar la sensibilidad frente a imágenes difíciles.',
     tags: ['Curiosidad Mórbida', 'Suzanne Oosterwijk', 'Neurobiología', 'Funk Brockmyer', 'Desensibilización'], keyTheorists: ['Suzanne Oosterwijk (2017, 2020)', 'Jeanne Funk Brockmyer (2022)'],
     summary: 'Las advertencias de contenido pueden despertar curiosidad. La repetición, en cambio, eleva el umbral emocional con el tiempo.',
     contentHtml: {

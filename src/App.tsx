@@ -146,10 +146,16 @@ export default function App() {
           }}
         />
 
-        {/* 1. Marco: primero se presentan los cuatro ejes del análisis. */}
+        {/* 1. Punto de partida: investigaciones académicas e imágenes sin censura. */}
+        <BlogTimeline
+          onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
+          onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}
+        />
+
+        {/* 2. Marco: los cuatro ejes que conectan las investigaciones. */}
         <ConceptualMapExplorer />
 
-        {/* 2. Recorrido guiado: definición, repetición, economía de la atención, ética y feed. */}
+        {/* 3. Recorrido guiado: definición, repetición, algoritmo, ética y feed. */}
         <div id="recorrido">
           <BlogSections
             onRedactionClick={() => setRedactionsRevealed((prev) => prev + 1)}
@@ -157,7 +163,7 @@ export default function App() {
           />
         </div>
 
-        {/* 3. Pausa reflexiva basada en la navegación de la persona. */}
+        {/* 4. Pausa reflexiva basada en la navegación de la persona. */}
         <DesensitizationInterlude
           warningsDismissed={warningsDismissed}
           totalWarningsSeen={warningsCount + warningsDismissed}
@@ -165,12 +171,6 @@ export default function App() {
           readingBehavior={habituationStats.readingBehavior}
           scrollSpeed={habituationStats.scrollSpeedPxPerSec}
           secondsElapsed={secondsElapsed}
-        />
-
-        {/* 4. Profundización opcional: investigaciones académicas compactas y desplegables. */}
-        <BlogTimeline
-          onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
-          onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}
         />
 
         {/* 5. Referentes visuales, luego fuentes para quien quiera comprobarlas. */}
