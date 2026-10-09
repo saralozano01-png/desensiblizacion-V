@@ -30,12 +30,13 @@ export function Navbar({
 
   const navLinks = [
     { id: 'inicio', label: 'INICIO' },
-    { id: 'articulos', label: 'BLOG' },
-    { id: 'marco-teorico', label: 'MARCO TEÓRICO' },
-    { id: 'feed', label: 'FEED SOCIAL' },
+    { id: 'marco-teorico', label: 'MARCO' },
+    { id: 'recorrido', label: 'RECORRIDO' },
+    { id: 'feed', label: 'FEED' },
+    { id: 'articulos', label: 'INVESTIGACIÓN' },
     { id: 'referentes', label: 'REFERENTES' },
-    { id: 'bibliografia', label: 'BIBLIOGRAFÍA' },
-    { id: 'reflexion', label: 'REFLEXIÓN' }
+    { id: 'bibliografia', label: 'FUENTES' },
+    { id: 'reflexion', label: 'CIERRE' }
   ];
 
   const toggleAudio = () => {

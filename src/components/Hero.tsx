@@ -140,8 +140,7 @@ export function Hero({ onScrollDown, onInitialWarningDismissed }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 pb-6 flex items-center justify-between text-xs font-mono text-[#7D878F]">
         <div className="flex items-center gap-2">
           <Eye className="w-3.5 h-3.5 text-[#8B191F]" />
-          <span className="hidden sm:inline">DISPOSITIVO VISUAL:</span>
-          <span className="text-[#DFE4EA]">BLOG CRÍTICO EN ORDEN CRONOLÓGICO INVERSO</span>
+          <span className="text-[#DFE4EA]">INVESTIGACIÓN VISUAL // ORDEN CRONOLÓGICO INVERSO</span>
         </div>
 
         <button

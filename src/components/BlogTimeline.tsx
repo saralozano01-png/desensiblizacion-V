@@ -12,7 +12,7 @@ interface BlogTimelineProps {
 
 export function BlogTimeline({ onArticleRead, onRedactionReveal }: BlogTimelineProps) {
   const [expandedArticles, setExpandedArticles] = useState<Record<string, boolean>>({
-    'art-05': true, // most recent expanded by default
+    'art-05': false,
     'art-04': false,
     'art-03': false,
     'art-02': false,
@@ -47,7 +47,7 @@ export function BlogTimeline({ onArticleRead, onRedactionReveal }: BlogTimelineP
         </h2>
 
         <p className="font-sans text-sm sm:text-base text-[#BDC6CE] max-w-2xl mt-3 leading-relaxed">
-          Ensayos críticos de investigación sobre la selección, censura y circulación de imágenes de dolor en la cultura digital universitaria contemporánea.
+          Profundizaciones opcionales para conectar cada eje del recorrido con investigaciones y autores. Abre únicamente el artículo que quieras consultar.
         </p>
       </div>
 
@@ -94,7 +94,7 @@ export function BlogTimeline({ onArticleRead, onRedactionReveal }: BlogTimelineP
                     censorBarText="██████████ [DOCUMENTO CLASIFICADO BAJO INVESTIGACIÓN]"
                     caption={article.coverCaption}
                     aspectRatio="16:9"
-                    initialCensored={index > 0}
+                    initialCensored={false}
                   />
                 </div>
               )}

@@ -45,7 +45,7 @@ export default function App() {
       }
 
       // Check current section
-      const sections = ['inicio', 'articulos', 'marco-teorico', 'feed', 'referentes', 'bibliografia', 'reflexion'];
+      const sections = ['inicio', 'marco-teorico', 'feed', 'recorrido', 'articulos', 'referentes', 'bibliografia', 'reflexion'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -140,31 +140,24 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <Hero
-          onScrollDown={() => handleNavigate('articulos')}
+          onScrollDown={() => handleNavigate('marco-teorico')}
           onInitialWarningDismissed={() => {
             setWarningsDismissed((prev) => prev + 1);
           }}
         />
 
-        {/* 1. Chronological Reverse Blog Articles Stream */}
-        <BlogTimeline
-          onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
-          onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}
-        />
-
-        {/* 2. Interactive Conceptual Map Explorer */}
+        {/* 1. Marco: primero se presentan los cuatro ejes del análisis. */}
         <ConceptualMapExplorer />
 
-        {/* 3. Deep Dive Chapters & Social Feed Simulation */}
-        <BlogSections
-          onRedactionClick={() => setRedactionsRevealed((prev) => prev + 1)}
-          onFeedInteraction={() => setFeedInteractions((prev) => prev + 1)}
-        />
+        {/* 2. Recorrido guiado: definición, repetición, economía de la atención, ética y feed. */}
+        <div id="recorrido">
+          <BlogSections
+            onRedactionClick={() => setRedactionsRevealed((prev) => prev + 1)}
+            onFeedInteraction={() => setFeedInteractions((prev) => prev + 1)}
+          />
+        </div>
 
-        {/* 4. Art Referents (Martha Rosler, Boligán, Carlos Villalón) */}
-        <ArtReferentsSection />
-
-        {/* 5. The Crucial Turning Point: Desensitization Interlude with Live Behavioral Feedback */}
+        {/* 3. Pausa reflexiva basada en la navegación de la persona. */}
         <DesensitizationInterlude
           warningsDismissed={warningsDismissed}
           totalWarningsSeen={warningsCount + warningsDismissed}
@@ -174,9 +167,15 @@ export default function App() {
           secondsElapsed={secondsElapsed}
         />
 
-        {/* 6. Academic Bibliography & Theorists (Sontag, Butler, Azoulay, Cohen, Slovic, Oosterwijk, Morales) */}
-        <BibliographySection />
+        {/* 4. Profundización opcional: investigaciones académicas compactas y desplegables. */}
+        <BlogTimeline
+          onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
+          onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}
+        />
 
+        {/* 5. Referentes visuales, luego fuentes para quien quiera comprobarlas. */}
+        <ArtReferentsSection />
+        <BibliographySection />
         {/* 7. Final Confrontation & Retrospective Intelligent Audit */}
         <FinalReflection
           warningsGenerated={warningsCount + warningsDismissed}

@@ -101,232 +101,83 @@ export const academicBibliography = [
 
 export const blogArticlesChronologicalReverse: BlogArticle[] = [
   {
-    id: 'art-05',
-    postNumber: 'ENTRADA #05',
-    date: '1 de Octubre, 2026 · 18:30 hrs',
+    id: 'art-05', postNumber: 'ENTRADA #05', date: '1 de Octubre, 2026 · 18:30 hrs',
     category: 'INVESTIGACIÓN MEDIÁTICA & VIRALIDAD',
     title: 'CUANDO LA VIOLENCIA SE CONVIERTE EN CONTENIDO: Instagram y la normalización de imágenes reales de sufrimiento',
-    subtitle: 'La violencia no desaparece cuando se censura: también cambia cuando se convierte en entretenimiento algorítmico y meme.',
-    readTime: '6 min de lectura',
-    author: 'Investigación Académica',
-    coverImage: articleViolenceContent,
-    coverCaption: 'La interfaz de red convierte la violencia en una publicación compartible y desplaza el contexto de quienes la observan.',
-    tags: ['Instagram', 'Memes', 'CBS News', 'Algoritmos', 'Martha Rosler'],
-    keyTheorists: ['Martha Rosler', 'E. Morales (2025)', 'Nicklin et al. (2020)'],
-    summary: 'Una investigación de CBS News reveló cientos de cuentas en Instagram dedicadas a compartir peleas, agresiones, accidentes y muertes reales combinadas con canciones de moda, audios cómicos y formato de meme. ¿Qué ocurre cuando el dolor ajeno se consume en la misma franja de scroll que una receta de cocina?',
+    subtitle: 'Cuando el dolor ajeno se mezcla con memes, música y recomendaciones.', readTime: '3 min de lectura', author: 'Investigación Académica',
+    coverImage: articleViolenceContent, coverCaption: 'La interfaz transforma la violencia en una publicación compartible y borra su contexto.',
+    tags: ['Instagram', 'Memes', 'CBS News', 'Algoritmos', 'Martha Rosler'], keyTheorists: ['Martha Rosler', 'E. Morales (2025)', 'Nicklin et al. (2020)'],
+    summary: 'Cuentas que difunden violencia real la insertan entre contenido cotidiano. El scroll convierte un hecho grave en un estímulo más.',
     contentHtml: {
-      lead: 'Una investigación de CBS News reveló la existencia de cientos de cuentas en Instagram dedicadas a compartir imágenes de violencia real mediante videos cortos y publicaciones en formato de meme. El contenido incluye peleas callejeras, agresiones policiales, accidentes vehiculares fatales y homicidios, alcanzando a millones de usuarios jóvenes dentro de una plataforma diseñada originariamente para la estética personal y la interacción social.',
+      lead: 'La violencia ya no llega solo como noticia: también aparece recomendada, editada y musicalizada dentro del entretenimiento diario.',
       sections: [
-        {
-          heading: '1. La violencia no solicitada: entre la risa y el shock',
-          paragraphs: [
-            'La investigación evidenció que este material violento aparece como contenido recomendado, incluso para usuarios que jamás lo han buscado activamente. De esta manera, las imágenes violentas dejan de estar limitadas a espacios informativos o noticiosos y comienzan a mezclarse con música viral, memes de gatos y publicaciones cotidianas de amigos.',
-            'Como explica Morales (2025) en su estudio sobre jóvenes universitarios colombianos, la violencia en redes ha dejado de ser un acontecimiento extraordinario para convertirse en la textura ambiental del feed. El usuario ya no va en busca de la noticia; la catástrofe lo asalta entre dos historias de amigos comiendo helado.'
-          ],
-          redactedFragment: {
-            label: 'FRAGMENTO DE INVESTIGACIÓN CBS NEWS',
-            hiddenText: 'Cuentas con más de 1.4 millones de seguidores monetizan videos de linchamientos intercalando enlaces a tiendas de ropa',
-            context: 'Auditoría sobre el modelo de negocio detrás de las cuentas de clips de impacto.'
-          }
-        },
-        {
-          heading: '2. Martha Rosler: Traer la guerra a la sala de estar',
-          paragraphs: [
-            'Este fenómeno actualiza de forma brutal la obra pionera de la artista Martha Rosler en su serie "House Beautiful: Bringing the War Home" (1967-1972, retomada en 2008 con The Gray Drape). Rosler combinaba imágenes de la guerra de Vietnam con fotografías de salas de estar de revistas de lujo norteamericanas, cuestionando la distancia obscena entre quienes sufren las bombas y quienes las observan mientras acomodan los cojines de su sofá.',
-            'Hoy, el teléfono inteligente es la sala de estar portátil de Martha Rosler. La distancia entre el campo de batalla y el dormitorio universitario se ha reducido a cero centímetros: el mismo dedo pulgar que da "me gusta" a la foto de una fiesta desliza el cuerpo sin vida de una víctima de conflicto armado.'
-          ],
-          quote: {
-            text: 'Mediante estos contrastes, Rosler cuestiona la distancia entre quienes experimentan la violencia y quienes la observan a través de los medios. Las imágenes transforman radicalmente cómo consumimos el sufrimiento ajeno.',
-            author: 'Martha Rosler',
-            work: 'House Beautiful: Bringing the War Home (1967-2008)'
-          }
-        },
-        {
-          heading: '3. El meme como analgésico social',
-          paragraphs: [
-            'A esto se suma la reutilización de las imágenes: algunos usuarios editan las tragedias, las aceleran, añaden efectos de sonido ridículos o las convierten en plantillas humorísticas. Esto despoja al suceso de cualquier rastro de luto o gravedad ética.',
-            'Cuando una situación violenta es seleccionada, recortada, censurada con una barra negra y musicalizada, no solo cambia lo que se ve: cambia el marco desde el cual la comunidad aprende qué dolores merecen ser tomados en serio y cuáles pueden ser ignorados entre risas.'
-          ]
-        }
+        { heading: '1. Entre la risa y el shock', paragraphs: ['Cuando la violencia aparece sin ser buscada, comparte espacio con amigos, recetas y memes. Esa convivencia normaliza el impacto y dificulta detenerse a pensar.'], redactedFragment: { label: 'FRAGMENTO DE INVESTIGACIÓN CBS NEWS', hiddenText: 'Cuentas con más de 1.4 millones de seguidores monetizan videos de linchamientos intercalando enlaces a tiendas de ropa', context: 'Explora el dato para ver el mecanismo de monetización.' } },
+        { heading: '2. La guerra llega al bolsillo', paragraphs: ['Martha Rosler mostró cómo el confort doméstico puede convivir con la guerra distante. Hoy el teléfono reduce esa distancia: un mismo dedo pasa de una fiesta a una tragedia.'], quote: { text: 'Las imágenes cambian radicalmente la forma en que consumimos el sufrimiento ajeno.', author: 'Martha Rosler', work: 'House Beautiful: Bringing the War Home' } },
+        { heading: '3. El meme como anestesia', paragraphs: ['Recortar, acelerar o volver humorística una tragedia cambia su sentido. La pregunta no es solo qué vemos, sino qué aprendemos a tomar en serio.'] }
       ]
     }
   },
   {
-    id: 'art-04',
-    postNumber: 'ENTRADA #04',
-    date: '28 de Septiembre, 2026 · 14:15 hrs',
-    category: 'MAPA CONCEPTUAL & ARQUITECTURA VISUAL',
+    id: 'art-04', postNumber: 'ENTRADA #04', date: '28 de Septiembre, 2026 · 14:15 hrs', category: 'ARQUITECTURA VISUAL',
     title: 'EL MAPA DE LA VISIBILIDAD: ¿Quién decide qué merece ser visto en el espacio digital?',
-    subtitle: 'Censura algorítmica vs. control institucional: la intervención material sobre la mirada.',
-    readTime: '7 min de lectura',
-    author: 'Investigación Académica',
-    coverImage: articleVisibilityMap,
-    coverCaption: 'Un mapa visual de símbolos conectados: lo que circula en pantalla también organiza la forma en que miramos.',
-    tags: ['Mapa Conceptual', 'Visibilidad', 'Censura Algorítmica', 'Control Institucional', 'Sensibilidad'],
-    keyTheorists: ['Judith Butler', 'Stanley Cohen', 'Ariella Azoulay'],
-    summary: 'A través de nuestro mapa conceptual analizamos los cuatro ejes que definen la visibilidad contemporánea: Censura (material y algorítmica), Exposición (repetición y viralidad), Representación (framing de la víctima) y Comunidad (consumo activo vs. pasivo).',
+    subtitle: 'Censura, exposición y encuadre: fuerzas que organizan la mirada.', readTime: '3 min de lectura', author: 'Investigación Académica',
+    coverImage: articleVisibilityMap, coverCaption: 'Lo que circula en pantalla también organiza la forma en que miramos.',
+    tags: ['Visibilidad', 'Censura Algorítmica', 'Control Institucional', 'Sensibilidad'], keyTheorists: ['Judith Butler', 'Stanley Cohen', 'Ariella Azoulay'],
+    summary: 'La visibilidad digital no es neutral: plataformas, instituciones y comunidades deciden qué aparece, cuánto se repite y cómo se interpreta.',
     contentHtml: {
-      lead: '¿Quién decide qué merece ser visto? La visibilidad no es un estado natural de las cosas: es el resultado de un filtro político y tecnológico continuo. En nuestro mapa conceptual de investigación, estructuramos cómo la sensibilidad comunitaria es moldeada en la encrucijada entre censura, exposición masiva y encuadre mediático.',
+      lead: 'Ver algo en internet depende de filtros técnicos y políticos. Esos filtros moldean lo que una comunidad considera urgente, tolerable u ocultable.',
       sections: [
-        {
-          heading: '1. El Doble Filo de la Censura: Protección vs. Control',
-          paragraphs: [
-            'La censura se manifiesta en dos dimensiones principales: la institucional (estados, tribunales, códigos penales) y la algorítmica (normas comunitarias de plataformas como Meta, TikTok o X).',
-            'La intervención material se traduce en pixelado, desenfoque y etiquetas de "Contenido Sensible". Bajo el discurso de "proteger la sensibilidad del usuario", las plataformas ejercen un control estricto sobre qué crímenes de estado o abusos policiales pueden ser presenciados y cuáles son expulsados de la circulación pública.'
-          ],
-          redactedFragment: {
-            label: 'MAPA DE CENSURA // INTERVENCIÓN MATERIAL',
-            hiddenText: 'El pixelado selectivo oculta la identidad de los agresores institucionales mientras expone la vulnerabilidad de las víctimas desprotegidas',
-            context: 'Análisis del sesgo en la moderación automática de contenido.'
-          }
-        },
-        {
-          heading: '2. Exposición: El Triángulo entre Repetición, Saturación e Inmediatez',
-          paragraphs: [
-            'En el extremo opuesto a la censura encontramos la sobreexposición. Géneros enteros de la red —como el True Crime, las páginas de muertes accidentales, los canales de telegram con filtraciones y los videos de catástrofes— se alimentan de la inmediatez permanente.',
-            'Esta sobreexposición detona una respuesta psicológica dividida en tres vertientes: la empatía inicial (rápida y fugaz), el morbo (curiosidad por la transgresión corporal) y la desensibilización sistemática.'
-          ]
-        },
-        {
-          heading: '3. Comunidad Consumidora: De la proximidad al voyeurismo pasivo',
-          paragraphs: [
-            'Una comunidad puede relacionarse con la violencia por proximidad directa (física, social, cultural o emocional, como vivir en una ciudad con conflicto) o por mediación indirecta a través de pantallas.',
-            'En los jóvenes universitarios, la comunidad consumidora suele oscilar entre la pasividad (el scroll indolente que se acostumbra al horror) y la actividad (compartir en stories, comentar, republicar o viralizar memes). La pregunta clave persiste: ¿qué comunidad estamos construyendo cuando nuestra única respuesta ante la herida es el retweet?'
-          ]
-        }
+        { heading: '1. Censura: protección y control', paragraphs: ['Pixelado, etiquetas y moderación pueden proteger, pero también pueden ocultar abusos que deberían ser públicos.'], redactedFragment: { label: 'MAPA DE CENSURA // INTERVENCIÓN MATERIAL', hiddenText: 'El pixelado selectivo oculta la identidad de los agresores institucionales mientras expone la vulnerabilidad de las víctimas desprotegidas', context: 'Revela este fragmento para examinar el sesgo de moderación.' } },
+        { heading: '2. Exposición y saturación', paragraphs: ['El extremo opuesto es la repetición constante. La atención oscila entre empatía inicial, curiosidad y cansancio ante una cadena de estímulos.'] },
+        { heading: '3. Comunidad y responsabilidad', paragraphs: ['Una comunidad puede detenerse, contextualizar y acompañar; o limitarse al scroll. Compartir también es una decisión sobre cómo circula el dolor.'] }
       ]
     }
   },
   {
-    id: 'art-03',
-    postNumber: 'ENTRADA #03',
-    date: '24 de Septiembre, 2026 · 11:00 hrs',
-    category: 'TEORÍA CRÍTICA & PSICOLOGÍA COGNITIVA',
+    id: 'art-03', postNumber: 'ENTRADA #03', date: '24 de Septiembre, 2026 · 11:00 hrs', category: 'TEORÍA CRÍTICA & PSICOLOGÍA COGNITIVA',
     title: 'FRAMES OF WAR Y PSYCHIC NUMBING: Por qué una sola muerte conmueve y un millón se vuelve estadística',
-    subtitle: 'Judith Butler, Paul Slovic y los marcos que determinan qué vidas son dignas de duelo.',
-    readTime: '8 min de lectura',
-    author: 'Investigación Académica',
-    coverImage: articlePsychicNumbing,
-    coverCaption: 'La mente recibe señales de violencia y entretenimiento en el mismo circuito de consumo digital.',
-    tags: ['Judith Butler', 'Paul Slovic', 'Psychic Numbing', 'Framing', 'Compassion Fade'],
-    keyTheorists: ['Judith Butler (2009)', 'Paul Slovic (2007, 2017)', 'Thomas et al. (2018)'],
-    summary: 'Analizamos cómo los marcos mediáticos definen quién es una víctima con rostro y quién es un número anónimo, y cómo el fenómeno del entumecimiento psíquico (Psychic Numbing) estudiado por Slovic demuestra que el corazón humano colapsa cuando se multiplican los cuerpos.',
+    subtitle: 'Butler y Slovic explican por qué algunos dolores se vuelven visibles.', readTime: '3 min de lectura', author: 'Investigación Académica',
+    coverImage: articlePsychicNumbing, coverCaption: 'La mente recibe violencia y entretenimiento dentro del mismo flujo digital.',
+    tags: ['Judith Butler', 'Paul Slovic', 'Psychic Numbing', 'Framing', 'Compassion Fade'], keyTheorists: ['Judith Butler (2009)', 'Paul Slovic (2007, 2017)', 'Thomas et al. (2018)'],
+    summary: 'Los marcos mediáticos dan rostro a unas víctimas y reducen otras a cifras. Al crecer la escala del dolor, la empatía puede apagarse.',
     contentHtml: {
-      lead: '¿Por qué la fotografía de un niño pequeño en una playa puede movilizar a parlamentos enteros durante 72 horas, mientras que el reporte de 50.000 muertos en un bombardeo es recibido con un bostezo en la fila del supermercado? La respuesta se encuentra en el cruce entre la filosofía política de Judith Butler y la psicología cognitiva de Paul Slovic.',
+      lead: 'Una imagen singular puede conmover más que una cifra inmensa. Butler y Slovic ayudan a entender esa paradoja.',
       sections: [
-        {
-          heading: '1. Judith Butler: Vidas reconocibles y marcos de guerra',
-          paragraphs: [
-            'En "Frames of War: When Is Life Grievable?" (2009), Judith Butler sostiene que para que una vida sea llorada públicamente (grievable), primero debe ser aprehendida como una vida viva. Los "marcos" (frames) de los medios y los discursos hegemónicos delimitan quién califica como un ser humano digno de protección y quién es presentado como una pérdida colateral inevitable.',
-            'Cuando los medios muestran a víctimas occidentales, presentan sus nombres, sus carreras, fotos familiares y testimonios de sus allegados: son vidas identificables. Cuando la violencia golpea a periferias del sur global, los muertos aparecen como siluetas sin nombre, amontonados bajo cifras abstractas. El encuadre decide de antemano el luto permitido.'
-          ],
-          quote: {
-            text: 'Un encuadre no solo muestra lo que encierra; excluye activamente lo que queda fuera. La producción de la persona llorable es una operación política de primer orden.',
-            author: 'Judith Butler',
-            work: 'Frames of War (2009)'
-          }
-        },
-        {
-          heading: '2. Paul Slovic: El colapso del afecto y el entumecimiento psíquico',
-          paragraphs: [
-            'El psicólogo Paul Slovic (2007) acuñó la famosa sentencia: "If I look at the mass I will never act" (Si miro a la masa, nunca actuaré). A través de rigurosos experimentos de laboratorio, Slovic demostró que nuestra respuesta afectiva no es lineal: somos capaces de sentir una empatía intensa ante un solo individuo en peligro, pero ante dos individuos la empatía decae, y ante cientos se precipita a un entumecimiento casi total (Psychic Numbing).',
-            'En su estudio de 2017 sobre fotografías icónicas (como la de Aylan Kurdi en 2015), Slovic, Västfjäll y Gregory demostraron que el impacto de una imagen icónica produce un pico de compasión que se evapora en cuestión de semanas, siendo reemplazado por el "compassion fade": el agotamiento del espectador que se siente impotente ante la inmensidad del dolor.'
-          ]
-        },
-        {
-          heading: '3. El diseño del scroll contemporáneo como máquina de numbing',
-          paragraphs: [
-            'Las plataformas de redes sociales están diseñadas para maximizar el entumecimiento psíquico. Al agrupar tragedias masivas en hilos de Twitter o resúmenes de titulares de 15 segundos en TikTok, convierten la experiencia moral en una catarata abstracta de dolor sin rostros identificables.',
-            'Como señalan Thomas et al. (2018), el distress digital generado por el exceso de tragedia no moviliza: genera parálisis de acción y repliegue cínico.'
-          ]
-        }
+        { heading: '1. Vidas que se reconocen', paragraphs: ['Butler plantea que los medios deciden qué vidas reciben nombre, historia y duelo. El encuadre condiciona la empatía antes de que miremos.'], quote: { text: 'Un encuadre muestra, pero también excluye lo que queda fuera.', author: 'Judith Butler', work: 'Frames of War (2009)' } },
+        { heading: '2. El límite de la compasión', paragraphs: ['Slovic observó que respondemos con intensidad a una persona identificable, pero la emoción disminuye frente a grandes cifras. No es indiferencia natural: es un límite afectivo.' ] },
+        { heading: '3. El scroll acelera el desgaste', paragraphs: ['Al encadenar tragedias sin contexto, las plataformas favorecen saturación y parálisis. Pausar y contextualizar puede interrumpir ese ciclo.'] }
       ]
     }
   },
   {
-    id: 'art-02',
-    postNumber: 'ENTRADA #02',
-    date: '19 de Septiembre, 2026 · 17:40 hrs',
-    category: 'FILOSOFÍA VISUAL & DERECHOS CIVILES',
+    id: 'art-02', postNumber: 'ENTRADA #02', date: '19 de Septiembre, 2026 · 17:40 hrs', category: 'FILOSOFÍA VISUAL & DERECHOS CIVILES',
     title: 'EL CONTRATO CIVIL DE LA FOTOGRAFÍA: Susan Sontag, Ariella Azoulay y Stanley Cohen',
-    subtitle: 'Entre la mirada que exige justicia y los estados colectivos de negación cotidiana.',
-    readTime: '7 min de lectura',
-    author: 'Investigación Académica',
-    coverImage: articleCivilPhotography,
-    coverCaption: 'Un rostro fragmentado recuerda que toda fotografía implica una relación ética entre quien mira y quien es visto.',
-    tags: ['Susan Sontag', 'Ariella Azoulay', 'Stanley Cohen', 'Contrato Civil', 'Estados de Negación'],
-    keyTheorists: ['Susan Sontag (2003)', 'Ariella Azoulay (2008)', 'Stanley Cohen (2001)'],
-    summary: 'Examinamos el debate entre la advertencia de Sontag sobre la pasividad del espectador, la propuesta de Azoulay de la fotografía como un contrato ciudadano vinculante, y los mecanismos de negación analizados por Cohen (saber y no saber al mismo tiempo).',
+    subtitle: 'Mirar una fotografía también implica una decisión ética.', readTime: '3 min de lectura', author: 'Investigación Académica',
+    coverImage: articleCivilPhotography, coverCaption: 'Toda fotografía crea una relación ética entre quien mira y quien es visto.',
+    tags: ['Susan Sontag', 'Ariella Azoulay', 'Stanley Cohen', 'Contrato Civil', 'Estados de Negación'], keyTheorists: ['Susan Sontag (2003)', 'Ariella Azoulay (2008)', 'Stanley Cohen (2001)'],
+    summary: 'Sontag advierte sobre la pasividad; Azoulay propone una responsabilidad ciudadana; Cohen explica cómo sabemos y, aun así, evitamos actuar.',
     contentHtml: {
-      lead: 'Mirar el dolor de los demás es un acto cargado de tensión ontológica. ¿Somos testigos comprometidos o simplemente mirones protegidos por el cristal de la pantalla? Tres pensadores fundamentales desentrañan las trampas morales de la mirada occidental.',
+      lead: 'Las imágenes del dolor pueden informar, saturar o movilizar. La diferencia está en la forma de mirarlas y responder.',
       sections: [
-        {
-          heading: '1. Susan Sontag: La sobreexposición que devora el sentido',
-          paragraphs: [
-            'En "Regarding the Pain of Others" (2003), Susan Sontag revisó sus ideas juveniles de "Sobre la fotografía" para advertir sobre el riesgo de la habituación. Sontag subraya que la censura puede ocultar una imagen, pero la sobreexposición puede lograr algo peor: ocultar su significado.',
-            'Cuando las fotografías de guerra circulan como productos de consumo rápido, el espectador adquiere la ilusión de que ya "sabe lo que pasa", eximiéndose de cualquier esfuerzo ético o político. La imagen del dolor ajeno se convierte en un fetiche visual que confirma nuestra seguridad personal.'
-          ],
-          quote: {
-            text: 'Las fotografías de una atrocidad pueden suscitar reacciones opuestas: una llamada a la paz o un grito de venganza. O simplemente la vaga conciencia, alentada por la continua difusión de imágenes de dolor, de que suceden cosas terribles.',
-            author: 'Susan Sontag',
-            work: 'Regarding the Pain of Others (2003)'
-          }
-        },
-        {
-          heading: '2. Ariella Azoulay: El contrato civil de la fotografía',
-          paragraphs: [
-            'Frente a la melancolía de Sontag, la filósofa Ariella Azoulay propone en "The Civil Contract of Photography" (2008) una lectura radical: la fotografía es un contrato ciudadano no firmado entre tres partes: quien toma la foto, quien es fotografiado y quien la contempla.',
-            'Para Azoulay, la persona fotografiada en situación de opresión o despojo no es una víctima pasiva: mediante la imagen, está emitiendo una queja pública y una demanda de ciudadanía ante el espectador. Mirar esa fotografía no es un privilegio estético: es asumir la responsabilidad cívica de ser testigo.'
-          ]
-        },
-        {
-          heading: '3. Stanley Cohen: Saber y no saber (Los estados de negación)',
-          paragraphs: [
-            'Sin embargo, ¿qué hacemos habitualmente con esa demanda? Stanley Cohen, en "States of Denial" (2001), describe los mecanismos de negación implicatoria: el ciudadano contemporáneo sabe perfectamente que se cometen atrocidades a diario, pero se comporta psicológicamente como si no lo supiera.',
-            'La interfaz digital facilita esta negación: ante un video de linchamiento o bombardeo, cerramos la pestaña con un clic o reaccionamos con un emoji triste. Sabemos el hecho, pero negamos sus implicaciones éticas en nuestra conducta.'
-          ]
-        }
+        { heading: '1. Sontag: ver no basta', paragraphs: ['La exposición repetida puede volver una atrocidad familiar. Saber que algo ocurre no equivale a asumir una posición ante ello.'], quote: { text: 'Las fotografías pueden llamar a la paz o dejar solo una vaga conciencia de que ocurren cosas terribles.', author: 'Susan Sontag', work: 'Regarding the Pain of Others (2003)' } },
+        { heading: '2. Azoulay: el deber de ser testigo', paragraphs: ['Para Azoulay, una fotografía vincula a quien toma, a quien aparece y a quien mira. Observar implica reconocer una demanda de ciudadanía.'] },
+        { heading: '3. Cohen: saber y no saber', paragraphs: ['La interfaz permite cerrar, pasar o reaccionar sin consecuencias. Esa facilidad sostiene formas cotidianas de negación.'] }
       ]
     }
   },
   {
-    id: 'art-01',
-    postNumber: 'ENTRADA #01 (FUNDACIONAL)',
-    date: '12 de Septiembre, 2026 · 09:15 hrs',
-    category: 'NEUROPSICOLOGÍA & CONDUCTA DIGITAL',
+    id: 'art-01', postNumber: 'ENTRADA #01 (FUNDACIONAL)', date: '12 de Septiembre, 2026 · 09:15 hrs', category: 'NEUROPSICOLOGÍA & CONDUCTA DIGITAL',
     title: 'LA CURIOSIDAD MÓRBIDA Y EL UMBRAL DEL CONSUMO: ¿Por qué buscamos voluntariamente lo perturbador?',
-    subtitle: 'Suzanne Oosterwijk, Jeanne Funk Brockmyer y los circuitos de recompensa del dolor.',
-    readTime: '6 min de lectura',
-    author: 'Investigación Académica',
-    coverImage: articleMorbidCuriosity,
-    coverCaption: 'La pantalla y el lenguaje de la violencia muestran cómo el consumo repetido puede alterar nuestra sensibilidad.',
-    tags: ['Curiosidad Mórbida', 'Suzanne Oosterwijk', 'Neurobiología', 'Funk Brockmyer', 'Desensibilización'],
-    keyTheorists: ['Suzanne Oosterwijk (2017, 2020)', 'Jeanne Funk Brockmyer (2022)'],
-    summary: '¿Por qué cuando hay una advertencia de "Contenido Sensible", el impulso inmediato de millones de jóvenes es presionar "Ver ahora"? Oosterwijk demuestra que la curiosidad mórbida activa los circuitos de recompensa del cerebro, mientras Funk Brockmyer describe la atrofia empática por repetición.',
+    subtitle: 'Curiosidad, advertencias y repetición: el circuito del consumo sensible.', readTime: '3 min de lectura', author: 'Investigación Académica',
+    coverImage: articleMorbidCuriosity, coverCaption: 'El consumo repetido puede alterar la sensibilidad frente a imágenes difíciles.',
+    tags: ['Curiosidad Mórbida', 'Suzanne Oosterwijk', 'Neurobiología', 'Funk Brockmyer', 'Desensibilización'], keyTheorists: ['Suzanne Oosterwijk (2017, 2020)', 'Jeanne Funk Brockmyer (2022)'],
+    summary: 'Las advertencias de contenido pueden despertar curiosidad. La repetición, en cambio, eleva el umbral emocional con el tiempo.',
     contentHtml: {
-      lead: 'Existe una contradicción flagrante en el consumo contemporáneo de internet: decimos querer un entorno seguro y pacífico, pero los videos de peleas, accidentes letales y ejecuciones acumulan cientos de millones de reproducciones. ¿Es simple maldad o un dispositivo neuroevolutivo hackeado por las interfaces de usuario?',
+      lead: 'Buscamos información sobre el peligro, pero las plataformas pueden convertir ese impulso en consumo continuo.',
       sections: [
-        {
-          heading: '1. Suzanne Oosterwijk: La neurobiología de la curiosidad mórbida',
-          paragraphs: [
-            'En sus investigaciones de 2017 y 2020 en Scientific Reports, la neuropsicóloga Suzanne Oosterwijk demostró que la elección voluntaria de visualizar información mórbida activa el estriado ventral, una región cerebral íntimamente ligada al sistema dopaminérgico de recompensa.',
-            'Los seres humanos han evolucionado para recopilar información sobre amenazas letales: saber cómo mata un depredador o cómo ocurre un accidente ayuda biológicamente a evitarlo en el mundo físico. Sin embargo, en el entorno digital, este impulso evolutivo se desquicia: la interfaz ofrece miles de peligros sin costo físico inmediato, atrapando al cerebro en un ciclo compulsivo de clickbait sangriento.'
-          ]
-        },
-        {
-          heading: '2. El botón de advertencia como acelerador del morbo',
-          paragraphs: [
-            'La etiqueta de "Sensitive Content" o "Contenido Sensible" con el ojo tachado opera, irónicamente, como un catalizador del morbo. Al colocar una barrera visual entre el usuario y la imagen, la plataforma no disminuye el interés: lo inflama mediante el tabú.',
-            'El usuario que pulsa "Ver ahora" cree estar tomando una decisión libre y audaz, cuando en realidad está respondiendo al estímulo más predecible del diseño de interacción.'
-          ]
-        },
-        {
-          heading: '3. Jeanne Funk Brockmyer: De la sobreestimulación a la atrofia empática',
-          paragraphs: [
-            'La investigadora Jeanne Funk Brockmyer ha estudiado durante décadas los efectos de la exposición repetida a la violencia en pantallas en jóvenes. Su trabajo describe cómo el sistema parasimpático eleva progresivamente su umbral de tolerancia: para sentir la misma estimulación, el joven necesita consumir imágenes cada vez más explícitas y grotescas.',
-            'La empatía no desaparece de golpe; se atrofia por desuso, transformando a una generación en espectadores imperturbables capaces de presenciar la agonía de un semejante mientras sostienen un emparedado.'
-          ]
-        }
+        { heading: '1. Curiosidad por lo amenazante', paragraphs: ['Oosterwijk relaciona la elección de información mórbida con circuitos de recompensa. Conocer una amenaza puede sentirse útil, aunque en pantalla no exista riesgo inmediato.'] },
+        { heading: '2. La advertencia también atrae', paragraphs: ['Una etiqueta de contenido sensible puede funcionar como barrera, pero también como señal de tabú. Por eso el diseño importa tanto como la advertencia.'] },
+        { heading: '3. Repetición y sensibilidad', paragraphs: ['Funk Brockmyer estudia cómo la exposición constante puede subir el umbral emocional. La empatía no desaparece de golpe: se desgasta cuando no hay pausa ni contexto.'] }
       ]
     }
   }

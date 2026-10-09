@@ -68,20 +68,19 @@ export function ConceptualMapExplorer() {
   const current = nodeData[activeNode];
 
   return (
-    <section id="mapa-conceptual" className="max-w-5xl mx-auto px-4 sm:px-6 my-20 scroll-mt-20">
+    <section id="marco-teorico" className="max-w-5xl mx-auto px-4 sm:px-6 my-20 scroll-mt-20">
       {/* Section Header */}
       <div className="border-b border-[#3D4750] pb-4 mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 text-xs font-mono text-[#8B191F] mb-2 uppercase font-bold tracking-widest">
             <GitBranch className="w-4 h-4" />
-            <span>DISPOSITIVO TEÓRICO // MAPA CONCEPTUAL</span>
+            <span>DISPOSITIVO TEÓRICO // MARCO ANALÍTICO</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA] leading-tight">
-            LA ARQUITECTURA DE LA VISIBILIDAD
+            DESGLOSE TEÓRICO DE LA DESENSIBILIZACIÓN
           </h2>
           <p className="text-sm font-sans text-[#BDC6CE] max-w-xl mt-1">
-            Basado en la investigación académica sobre desensibilización a la violencia en medios digitales.
-            Explora cómo se construye socialmente la sensibilidad frente a la violencia a través de 4 ejes interconectados.
+            Cuatro ejes conceptuales que estructuran la investigación. Cada nodo articula los aportes teóricos clave y las preguntas que orientan el análisis.
           </p>
         </div>
 
