@@ -89,7 +89,7 @@ export function CensoredMediaCard({
           src={imageSrc}
           alt={altText}
           referrerPolicy="no-referrer"
-          className={`w-full h-full object-cover transition-all duration-500 filter ${
+          className={`w-full h-full object-contain transition-all duration-500 filter ${
             censorMode === 0
               ? 'blur-2xl opacity-15 grayscale'
               : censorMode === 1
