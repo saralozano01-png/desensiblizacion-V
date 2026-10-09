@@ -91,10 +91,10 @@ export function CensoredMediaCard({
           referrerPolicy="no-referrer"
           className={`w-full h-full object-contain transition-all duration-500 filter ${
             censorMode === 0
-              ? 'blur-2xl opacity-15 grayscale'
+              ? 'blur-2xl opacity-15'
               : censorMode === 1
-              ? 'grayscale contrast-150 brightness-90 blur-[0.5px]'
-              : 'grayscale contrast-125 brightness-95'
+              ? 'contrast-125 brightness-90 blur-[0.5px]'
+              : 'contrast-110 brightness-95'
           }`}
         />
 

@@ -1,4 +1,7 @@
 import { FeedItem } from '../types';
+import feedAbstractGray from '../assets/images/feed_abstract_gray_01.jpeg';
+import feedAbstractRedLight from '../assets/images/archive_memory.jpg';
+import feedAbstractRedDark from '../assets/images/feed_abstract_red_03.png';
 
 export const feedItemsData: FeedItem[] = [
   {
@@ -11,7 +14,7 @@ export const feedItemsData: FeedItem[] = [
     bodyText: 'Fuerzas de seguridad acordonan 6 manzanas tras intercambios de disparos. Se reportan múltiples detonaciones continuas. Vecinos transmiten desde sus ventanas.',
     censored: true,
     censoredLabel: '[CONTENIDO CENSURADO // RESTRINGIDO POR PROTOCOLO JUDICIAL]',
-    imageSrc: '/src/assets/images/feed_abstract_gray_01.jpeg',
+    imageSrc: feedAbstractGray,
     censorLevel: 'heavy',
     likes: 1248,
     commentsCount: 324,
@@ -66,7 +69,7 @@ export const feedItemsData: FeedItem[] = [
     bodyText: 'Peritos forenses retiran evidencias no divulgadas. Testigos afirman haber visto vehículos oficiales desde la madrugada. La zona permanece en silencio sepulcral.',
     censored: true,
     censoredLabel: '[IMAGEN RETIRADA // SENSIBILIDAD EXTREMA]',
-    imageSrc: '/src/assets/images/feed_abstract_red_02.jfif',
+    imageSrc: feedAbstractRedLight,
     censorLevel: 'heavy',
     likes: 3821,
     commentsCount: 942,
@@ -103,7 +106,7 @@ export const feedItemsData: FeedItem[] = [
     bodyText: 'Vestía pantalón oscuro y chaqueta gris. Cualquier dato puede comunicarse anónimamente al enlace verificado. Ayúdanos compartiendo.',
     censored: true,
     censoredLabel: '[FOTOGRAFÍA SUJETA A VERIFICACIÓN FORENSE]',
-    imageSrc: '/src/assets/images/feed_abstract_red_03.png',
+    imageSrc: feedAbstractRedDark,
     censorLevel: 'medium',
     likes: 9540,
     commentsCount: 1102,

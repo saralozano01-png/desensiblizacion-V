@@ -137,7 +137,7 @@ export function SimulatedSocialFeed({ onInteraction }: SimulatedSocialFeedProps)
                   censorBarText={post.censoredLabel || '██████████ [CONTENIDO CENSURADO]'}
                   caption={post.headline}
                   aspectRatio="16:9"
-                  initialCensored={true}
+                  initialCensored={false}
                 />
               ) : post.censored ? (
                 <div className="relative border border-[#3D4750] bg-[#161B20] overflow-hidden my-3 min-h-[170px] flex flex-col items-center justify-center p-4 text-center">
