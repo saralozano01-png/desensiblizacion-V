@@ -5,6 +5,14 @@ import { HabituationChart } from './HabituationChart';
 import { SimulatedSocialFeed } from './SimulatedSocialFeed';
 import { CensoredMediaCard } from './CensoredMediaCard';
 import { soundFx } from '../utils/audio';
+import sectionDesensitization from '../assets/images/section_desensitization.jpg';
+import sectionRepetition from '../assets/images/section_repetition.jpg';
+import sectionViolenceContent from '../assets/images/section_violence_content.jpg';
+import sectionLookingWithoutSeeing from '../assets/images/section_looking_without_seeing.jpg';
+import archiveNight from '../assets/images/archive_night.jpg';
+import archivePerimeter from '../assets/images/archive_perimeter.jpg';
+import archiveForensic from '../assets/images/archive_forensic.jpg';
+import archiveMemory from '../assets/images/archive_memory.jpg';
 
 interface BlogSectionsProps {
   onRedactionClick: () => void;
@@ -21,34 +29,36 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
 
   return (
     <div className="space-y-24 py-16">
+
       {/* ============================================================== */}
-      {/* SECCIÓN 1: ¿QUÉ ES LA DESENSIBILIZACIÓN? */}
+      {/* CAPÍTULO 01: ¿QUÉ ES LA DESENSIBILIZACIÓN?                      */}
+      {/* Base conceptual — definición y mecanismo neurobiológico          */}
       {/* ============================================================== */}
       <article id="desensibilizacion" className="max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-20">
-        {/* Section Header */}
         <div className="border-b border-[#3D4750] pb-4 mb-8">
           <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
-            <span className="text-[#8B191F] font-bold">CAPÍTULO 01 // MARCO CONCEPTUAL</span>
+            <span className="text-[#8B191F] font-bold">CAPÍTULO 01 // DEFINICIÓN & MECANISMO</span>
             <span>LECTURA: 4 MIN</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
             ¿QUÉ ES LA DESENSIBILIZACIÓN?
           </h2>
+          <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
+            Antes de analizar cómo los medios la producen, es necesario entender qué ocurre en el sistema nervioso cuando la alarma empática se apaga.
+          </p>
         </div>
 
-        {/* Archival Photo 1 with CensoredMediaCard */}
         <CensoredMediaCard
-          imageSrc="/src/assets/images/commuters_screen_glow_1790902305889.jpg"
+          imageSrc={sectionDesensitization}
           altText="Pasajeros consumiendo noticias en dispositivos móviles en la penumbra"
           caseCode="REGISTRO-01 // UMBRAL URBANO"
           title="Consumo de violencia en tránsito cotidiano"
           censorBarText="██████████ [IDENTIDAD DE TESTIGOS PROTEGIDA]"
-          caption="Fig. 1.1 — Pasajeros expuestos a reportes de conflicto armado entre transbordos de metro."
+          caption="Fig. 1.1 — La textura del consumo repetido convierte lo sensible en una superficie cotidiana."
           aspectRatio="16:9"
           initialCensored={true}
         />
 
-        {/* Editorial Body Prose */}
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
           <p className="first-letter:text-5xl first-letter:font-['Bebas_Neue'] first-letter:float-left first-letter:mr-3 first-letter:text-[#8B191F]">
             La desensibilización no es la pérdida de la vista, sino la extinción de la perturbación.
@@ -59,7 +69,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             Cuando un ser humano ve por primera vez la imagen de un cuerpo mutilado o una ciudad en ruinas, el hipotálamo dispara una descarga inmediata de adrenalina y cortisol. El ritmo cardíaco se dispara; la pupila se dilata; el estómago se comprime. Nuestro cuerpo interpreta el sufrimiento ajeno como una amenaza inminente para la especie: <span className="text-[#DFE4EA] font-bold">hay dolor aquí, por lo tanto debo protegerme o socorrer</span>.
           </p>
 
-          {/* Interactive Redaction Callout */}
           <div className="border border-[#3D4750] bg-[#1C2228] p-5 my-6 font-mono text-sm space-y-3">
             <div className="text-xs text-[#8B191F] font-bold uppercase tracking-wider flex items-center gap-2">
               <FileText className="w-4 h-4" />
@@ -77,7 +86,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             Sin embargo, el cerebro humano no fue diseñado para ser testigo del dolor global ininterrumpido. Al vivir conectados a servidores que transmiten masacres, linchamientos y catástrofes en tiempo real las 24 horas del día, el sistema nervioso opta por la única estrategia de supervivencia biológica disponible: <span className="text-[#DFE4EA] font-semibold">apagar el receptor</span>. La conmoción se degrada en curiosidad morbosa, la curiosidad en costumbre, y la costumbre, finalmente, en una total e imperceptible indiferencia.
           </p>
 
-          {/* Susan Sontag Reference Quote */}
           <blockquote className="border-l-2 border-[#8B191F] pl-6 py-2 my-8 font-mono text-base italic text-[#DFE4EA] bg-[#222830]">
             "Hacerse insensible ante lo que se muestra es inevitable si uno se pasa la vida mirando imágenes de dolor. Las imágenes que circulan sin cesar no permiten la pausa; y sin pausa, el horror se vuelve simplemente otra imagen más."
             <footer className="text-xs not-italic text-[#7D878F] mt-2 font-bold uppercase tracking-wider">
@@ -88,27 +96,87 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
       </article>
 
       {/* ============================================================== */}
-      {/* SECCIÓN 2: LA VIOLENCIA COMO CONTENIDO */}
+      {/* CAPÍTULO 02: LA REPETICIÓN                                       */}
+      {/* La física de la habituación — cómo la frecuencia anestesia       */}
+      {/* Antes de hablar de mercantilización, hay que entender la ley     */}
+      {/* biológica que la hace posible.                                   */}
+      {/* ============================================================== */}
+      <article id="repeticion" className="max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-20">
+        <div className="border-b border-[#3D4750] pb-4 mb-8">
+          <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
+            <span className="text-[#8B191F] font-bold">CAPÍTULO 02 // HABITUACIÓN & RENDIMIENTO DECRECIENTE</span>
+            <span>LECTURA: 4 MIN</span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
+            LA REPETICIÓN
+          </h2>
+          <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
+            Comprender la habituación perceptual es el paso previo para entender por qué la industria mediática puede monetizar el horror de forma sistemática.
+          </p>
+        </div>
+
+        <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mb-8">
+          <p>
+            ¿Por qué la repetición altera nuestra capacidad de conmovernos? La respuesta reside en la ley biológica de los rendimientos decrecientes. El sistema perceptual de los mamíferos funciona mediante el contraste: solo detecta aquello que difiere del entorno basal.
+          </p>
+
+          <p>
+            Si un trueno estalla en una noche de calma, todo el cuerpo se estremece. Si el trueno retumba cada cuatro segundos durante diez años, los habitantes de la casa terminan durmiendo plácidamente con la ventana abierta. La violencia digital opera bajo la misma física.
+          </p>
+        </div>
+
+        {/* Curva de habituación sensorial interactiva */}
+        <HabituationChart />
+
+        <div className="my-8">
+          <CensoredMediaCard
+            imageSrc={sectionRepetition}
+            altText="Muro de pantallas y monitores de vigilancia analógica con estática y señales bloqueadas"
+            caseCode="SISTEMA-CCTV // CABINA 04"
+            title="Saturación de canales en simultáneo"
+            censorBarText="██████████ [TRANSMISIÓN INTERRUMPIDA POR SEÑAL DE ALERTA]"
+            caption="Fig. 2.1 — Repetición visual: señales que persisten hasta volverse parte del fondo."
+            aspectRatio="16:9"
+            initialCensored={false}
+          />
+        </div>
+
+        <div className="mt-8 space-y-4 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed">
+          <p>
+            Cada nueva catástrofe televisada debe subir la apuesta estética para lograr la misma atención que la catástrofe anterior. Cuando el reporte de diez muertos ya no sacude el café de la mañana, el noticiero necesita transmitir la persecución en vivo; cuando la persecución aburre, se requiere el ángulo de la cámara corporal policial en primera persona, idéntico a un videojuego bélico.
+          </p>
+          <p className="font-mono text-sm text-[#7D878F] border-l-2 border-[#41474F] pl-4">
+            "La repetición no limpia la herida; anestesia la piel para que el cirujano pueda seguir cobrando la entrada."
+          </p>
+        </div>
+      </article>
+
+      {/* ============================================================== */}
+      {/* CAPÍTULO 03: LA VIOLENCIA COMO CONTENIDO                         */}
+      {/* La industria aprovecha la habituación ya explicada:              */}
+      {/* mercantilización, algoritmo y economía de la atención.           */}
       {/* ============================================================== */}
       <article id="violencia" className="max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-20">
         <div className="border-b border-[#3D4750] pb-4 mb-8">
           <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
-            <span className="text-[#8B191F] font-bold">CAPÍTULO 02 // MERCANTILIZACIÓN</span>
+            <span className="text-[#8B191F] font-bold">CAPÍTULO 03 // MERCANTILIZACIÓN & ALGORITMO</span>
             <span>LECTURA: 5 MIN</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
             LA VIOLENCIA COMO CONTENIDO
           </h2>
+          <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
+            Una vez que la habituación garantiza que el umbral de alarma del espectador puede ser recalibrado indefinidamente, la industria mediática convierte ese mecanismo en un modelo de negocio.
+          </p>
         </div>
 
-        {/* Archival Photo 2 with CensoredMediaCard */}
         <CensoredMediaCard
-          imageSrc="/src/assets/images/redacted_archive_dossier_1790902318303.jpg"
+          imageSrc={sectionViolenceContent}
           altText="Dossier de periódicos y expedientes fuertemente tachados con tinta negra"
           caseCode="EXP-FORENSE // DOSSIER 802"
           title="Tragedia comercializada como métrica de retención"
           censorBarText="████████████████ [DOCUMENTO JUDICIAL CLASIFICADO]"
-          caption="Fig. 2.1 — Memorandos internos y coberturas sensacionalistas cubiertos por disposiciones legales."
+          caption="Fig. 3.1 — La violencia como contenido: una imagen simbólica que evita mostrar daño explícito."
           aspectRatio="16:9"
           initialCensored={true}
         />
@@ -122,7 +190,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             El contenido no exige responsabilidades morales ni convoca a la movilización colectiva; el contenido exige únicamente <span className="text-[#8B191F] font-bold">tiempo de permanencia (dwell time)</span> y clics. Los motores de recomendación algorítmica descubrieron hace más de una década que las emociones de valencia negativa de alta excitación —especialmente la indignación, el pavor y el morbo— retienen la mirada humana hasta cuatro veces más tiempo que la serenidad o la alegría.
           </p>
 
-          {/* Interactive Redacted Clause */}
           <div className="border border-[#3D4750] bg-[#1C2228] p-6 space-y-4">
             <div className="flex items-center justify-between text-xs font-mono border-b border-[#2F3339] pb-2">
               <span className="text-[#8B191F] font-bold uppercase tracking-wider">
@@ -142,165 +209,32 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
       </article>
 
       {/* ============================================================== */}
-      {/* SECCIÓN 3: LA REPETICIÓN */}
-      {/* ============================================================== */}
-      <article id="repeticion" className="max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-20">
-        <div className="border-b border-[#3D4750] pb-4 mb-8">
-          <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
-            <span className="text-[#8B191F] font-bold">CAPÍTULO 03 // HABITUACIÓN MATEMÁTICA</span>
-            <span>LECTURA: 4 MIN</span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
-            LA REPETICIÓN
-          </h2>
-        </div>
-
-        <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mb-8">
-          <p>
-            ¿Por qué la repetición altera nuestra capacidad de conmovernos? La respuesta reside en la ley biológica de los rendimientos decrecientes. El sistema perceptual de los mamíferos funciona mediante el contraste: solo detecta aquello que difiere del entorno basal.
-          </p>
-
-          <p>
-            Si un trueno estalla en una noche de calma, todo el cuerpo se estremece. Si el trueno retumba cada cuatro segundos durante diez años, los habitantes de la casa terminan durmiendo plácidamente con la ventana abierta. La violencia digital opera bajo la misma física.
-          </p>
-        </div>
-
-        {/* Embedded Interactive Sensory Curve */}
-        <HabituationChart />
-
-        {/* CRT Monitors Censored Media Card */}
-        <div className="my-8">
-          <CensoredMediaCard
-            imageSrc="/src/assets/images/censored_crt_monitors_1790905711966.jpg"
-            altText="Muro de pantallas y monitores de vigilancia analógica con estática y señales bloqueadas"
-            caseCode="SISTEMA-CCTV // CABINA 04"
-            title="Saturación de canales en simultáneo"
-            censorBarText="██████████ [TRANSMISIÓN INTERRUMPIDA POR SEÑAL DE ALERTA]"
-            caption="Fig. 3.1 — Bucle ininterrumpido de transmisiones en monitores de control."
-            aspectRatio="16:9"
-            initialCensored={false}
-          />
-        </div>
-
-        <div className="mt-8 space-y-4 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed">
-          <p>
-            Cada nueva catástrofe televisada debe subir la apuesta estética para lograr la misma atención que la catástrofe anterior. Cuando el reporte de diez muertos ya no sacude el café de la mañana, el noticiero necesita transmitir la persecución en vivo; cuando la persecución aburre, se requiere el ángulo de la cámara corporal policial en primera persona, idéntico a un videojuego bélico.
-          </p>
-          <p className="font-mono text-sm text-[#7D878F] border-l-2 border-[#41474F] pl-4">
-            "La repetición no limpia la herida; anestesia la piel para que el cirujano pueda seguir cobrando la entrada."
-          </p>
-        </div>
-      </article>
-
-      {/* ============================================================== */}
-      {/* SECCIÓN 4: REDES SOCIALES (SIMULACIÓN INTERACTIVA CON FOTOS) */}
-      {/* ============================================================== */}
-      <section id="feed" className="max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-20">
-        <div className="border-b border-[#3D4750] pb-4 mb-8 text-center sm:text-left">
-          <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
-            <span className="text-[#8B191F] font-bold">CAPÍTULO 04 // EL DISPOSITIVO DEL FEED</span>
-            <span>INTERACCIÓN CONTINUA</span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
-            REDES SOCIALES: LA YUXTAPOSICIÓN MONSTRUOSA
-          </h2>
-          <p className="font-mono text-xs sm:text-sm text-[#BDC6CE] mt-2">
-            Desliza e interactúa con el feed a continuación. Haz clic en <strong>Ver ahora</strong> para desclasificar las fotografías censuradas con barras de censura y sellos oficiales.
-          </p>
-        </div>
-
-        {/* Real Interactive Simulated Social Feed with Censored Photos */}
-        <SimulatedSocialFeed onInteraction={onFeedInteraction} />
-      </section>
-
-      {/* ============================================================== */}
-      {/* SECCIÓN 5: ARCHIVO VISUAL DESCLASIFICADO (GALERÍA DE FOTOS CENSURADAS) */}
-      {/* ============================================================== */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 border-t border-[#3D4750] pt-16">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#2F3339] pb-4 mb-8">
-          <div>
-            <div className="text-[11px] font-mono text-[#8B191F] font-bold tracking-widest uppercase flex items-center gap-1.5">
-              <ImageIcon className="w-3.5 h-3.5" />
-              GALERÍA MULTIMEDIA DE EVIDENCIA
-            </div>
-            <h3 className="font-['Bebas_Neue'] text-3xl sm:text-4xl tracking-wide text-[#DFE4EA]">
-              REGISTRO FOTOGRÁFICO BAJO CENSURA
-            </h3>
-          </div>
-          <p className="text-xs font-mono text-[#7D878F] max-w-xs">
-            Haz clic en "Ver ahora" o en el botón "MODO" para alternar las barras de censura en cada fotografía.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <CensoredMediaCard
-            imageSrc="/src/assets/images/crowd_protest_night_1790902285273.jpg"
-            altText="Multitud silueteada en disturbio nocturno bajo la niebla"
-            caseCode="CASO-01 // NOCHE PERIFÉRICA"
-            title="Disturbios y siluetas anónimas"
-            censorBarText="██████████ [ROSTROS CENSURADOS]"
-            caption="Registro de manifestantes frente a cerco de contención."
-            aspectRatio="4:3"
-            initialCensored={true}
-          />
-
-          <CensoredMediaCard
-            imageSrc="/src/assets/images/feed_police_perimeter_1790905676177.jpg"
-            altText="Perímetro policial nocturno con luces de emergencia"
-            caseCode="CASO-02 // PERÍMETRO POLICIAL"
-            title="Zona de balacera acordonada"
-            censorBarText="██████████ [NÚMERO DE PATRULLA RESERVADO]"
-            caption="Patrullas resguardando zona de detonaciones a las 02:40 AM."
-            aspectRatio="4:3"
-            initialCensored={true}
-          />
-
-          <CensoredMediaCard
-            imageSrc="/src/assets/images/feed_forensic_cordon_1790905691157.jpg"
-            altText="Inspección forense al amanecer en predio baldío"
-            caseCode="CASO-03 // CORDÓN FORENSE"
-            title="Levantamiento en predio industrial"
-            censorBarText="██████████ [EVIDENCIA OCULTA AL PÚBLICO]"
-            caption="Cinta de escena del crimen y peritos en penumbras."
-            aspectRatio="4:3"
-            initialCensored={false}
-          />
-
-          <CensoredMediaCard
-            imageSrc="/src/assets/images/feed_missing_bulletin_1790905702690.jpg"
-            altText="Muro callejero con afiches de personas desaparecidas"
-            caseCode="CASO-04 // MEMORIA CALLEJERA"
-            title="Fichas de búsqueda deterioradas"
-            censorBarText="██████████ [DATOS PERSONALES PROTEGIDOS]"
-            caption="Carteles pegados sobre muros mojados de la ciudad."
-            aspectRatio="4:3"
-            initialCensored={true}
-          />
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* SECCIÓN 6: MIRAR SIN VER */}
+      {/* CAPÍTULO 04: MIRAR SIN VER                                       */}
+      {/* La consecuencia ética de lo anterior: la escisión entre el       */}
+      {/* acto óptico y el acto moral. Cierra el arco teórico antes        */}
+      {/* de la demostración práctica del feed.                            */}
       {/* ============================================================== */}
       <article id="mirar" className="max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-20">
         <div className="border-b border-[#3D4750] pb-4 mb-8">
           <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
-            <span className="text-[#8B191F] font-bold">CAPÍTULO 05 // ONTOLOGÍA DE LA MIRADA</span>
+            <span className="text-[#8B191F] font-bold">CAPÍTULO 04 // ÉTICA DE LA MIRADA</span>
             <span>LECTURA: 4 MIN</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
             MIRAR SIN VER
           </h2>
+          <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
+            La desensibilización no es solo un fenómeno neurológico ni económico: es, sobre todo, una crisis de la responsabilidad moral del espectador.
+          </p>
         </div>
 
-        {/* Archival Photo with CCTV Overlay & CensoredMediaCard */}
         <CensoredMediaCard
-          imageSrc="/src/assets/images/cctv_empty_intersection_1790902296575.jpg"
+          imageSrc={sectionLookingWithoutSeeing}
           altText="Cámara de vigilancia registrando una encrucijada urbana desierta bajo la lluvia"
           caseCode={`CCTV-CAM-08 // ${cctvTimestamp}`}
           title="Encrucijada bajo vigilancia automatizada"
           censorBarText="██████████ [UBICACIÓN GEOGRÁFICA RESERVADA]"
-          caption="La cámara registra el escenario sin empatía ni compasión."
+          caption="Mirar sin ver: la imagen permanece, pero la atención puede desplazarse."
           aspectRatio="16:9"
           initialCensored={false}
         />
@@ -332,6 +266,94 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           </p>
         </div>
       </article>
+
+      {/* ============================================================== */}
+      {/* CAPÍTULO 05: EL FEED — DEMOSTRACIÓN PRÁCTICA                     */}
+      {/* El feed es donde los tres capítulos anteriores convergen.        */}
+      {/* Habituación + mercantilización + mirada ética = el scroll diario.*/}
+      {/* ============================================================== */}
+      <section id="feed" className="max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-20">
+        <div className="border-b border-[#3D4750] pb-4 mb-8 text-center sm:text-left">
+          <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
+            <span className="text-[#8B191F] font-bold">CAPÍTULO 05 // EL DISPOSITIVO EN ACCIÓN</span>
+            <span>INTERACCIÓN CONTINUA</span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
+            REDES SOCIALES: LA YUXTAPOSICIÓN MONSTRUOSA
+          </h2>
+          <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
+            Lo que acabas de leer no es teoría abstracta: ocurre exactamente en este feed, en este momento. Desliza e interactúa. Observa qué coexiste con qué.
+          </p>
+        </div>
+
+        <SimulatedSocialFeed onInteraction={onFeedInteraction} />
+
+        {/* Galería de registro visual — integrada como extensión del feed,  */}
+        {/* no como sección separada                                          */}
+        <div className="mt-16 border-t border-[#3D4750] pt-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-8">
+            <div>
+              <div className="text-[11px] font-mono text-[#8B191F] font-bold tracking-widest uppercase flex items-center gap-1.5">
+                <ImageIcon className="w-3.5 h-3.5" />
+                ARCHIVO VISUAL COMPLEMENTARIO
+              </div>
+              <h3 className="font-['Bebas_Neue'] text-3xl sm:text-4xl tracking-wide text-[#DFE4EA] mt-1">
+                REGISTRO FOTOGRÁFICO BAJO CENSURA
+              </h3>
+              <p className="text-xs font-mono text-[#7D878F] mt-1 max-w-md">
+                Las fotografías que no llegaron al feed. Haz clic en "Ver ahora" o en "MODO" para alternar los niveles de censura.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <CensoredMediaCard
+              imageSrc={archiveNight}
+              altText="Multitud silueteada en disturbio nocturno bajo la niebla"
+              caseCode="CASO-01 // NOCHE PERIFÉRICA"
+              title="Disturbios y siluetas anónimas"
+              censorBarText="██████████ [ROSTROS CENSURADOS]"
+              caption="Archivo visual 01 — Flor seca como señal de memoria y deterioro."
+              aspectRatio="4:3"
+              initialCensored={true}
+            />
+
+            <CensoredMediaCard
+              imageSrc={archivePerimeter}
+              altText="Perímetro policial nocturno con luces de emergencia"
+              caseCode="CASO-02 // PERÍMETRO POLICIAL"
+              title="Zona de balacera acordonada"
+              censorBarText="██████████ [NÚMERO DE PATRULLA RESERVADO]"
+              caption="Archivo visual 02 — Fruta intervenida como metáfora de un perímetro sensible."
+              aspectRatio="4:3"
+              initialCensored={true}
+            />
+
+            <CensoredMediaCard
+              imageSrc={archiveForensic}
+              altText="Inspección forense al amanecer en predio baldío"
+              caseCode="CASO-03 // CORDÓN FORENSE"
+              title="Levantamiento en predio industrial"
+              censorBarText="██████████ [EVIDENCIA OCULTA AL PÚBLICO]"
+              caption="Archivo visual 03 — Granada en sombra: registro simbólico de lo que se oculta."
+              aspectRatio="4:3"
+              initialCensored={false}
+            />
+
+            <CensoredMediaCard
+              imageSrc={archiveMemory}
+              altText="Muro callejero con afiches de personas desaparecidas"
+              caseCode="CASO-04 // MEMORIA CALLEJERA"
+              title="Fichas de búsqueda deterioradas"
+              censorBarText="██████████ [DATOS PERSONALES PROTEGIDOS]"
+              caption="Archivo visual 04 — Composición abstracta de memoria, exposición y censura."
+              aspectRatio="4:3"
+              initialCensored={true}
+            />
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

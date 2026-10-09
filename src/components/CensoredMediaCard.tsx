@@ -160,14 +160,14 @@ export function CensoredMediaCard({
             </div>
 
             {/* Heavy Censor Bars crossing the center of the photo */}
-            <div className="w-full flex flex-col items-center gap-2 my-auto">
-              <div className="w-4/5 sm:w-3/5 py-1.5 px-4 bg-[#161B20] border border-[#3D4750] shadow-[0_4px_20px_rgba(22,27,32,0.9)] flex items-center justify-center">
-                <span className="font-mono text-xs text-[#DFE4EA] font-bold tracking-widest text-center truncate">
+            <div className="w-full flex flex-col items-center gap-1.5 mt-auto mb-10 sm:mb-14">
+              <div className="w-3/5 sm:w-2/5 py-1 px-3 bg-[#161B20] border border-[#3D4750] shadow-[0_4px_14px_rgba(22,27,32,0.8)] flex items-center justify-center">
+                <span className="font-mono text-[10px] text-[#DFE4EA] font-bold tracking-wide text-center truncate">
                   {censorBarText}
                 </span>
               </div>
-              <div className="w-3/5 sm:w-2/5 py-1 bg-[#1C2228] text-center border border-[#2F3339]">
-                <span className="font-mono text-[10px] text-[#7D878F] tracking-widest">
+              <div className="w-2/5 sm:w-1/4 py-0.5 bg-[#1C2228] text-center border border-[#2F3339]">
+                <span className="font-mono text-[8px] text-[#7D878F] tracking-wide">
                   ████████████████████
                 </span>
               </div>
