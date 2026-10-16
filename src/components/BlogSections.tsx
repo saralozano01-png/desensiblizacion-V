@@ -34,13 +34,13 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <div className="border-b border-[#3D4750] pb-4 mb-8">
           <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
             <span className="text-[#8B191F] font-bold">CAPÍTULO 01 // DEFINICIÓN & MECANISMO</span>
-            <span>LECTURA: 4 MIN</span>
+            <span>LECTURA: 2 MIN</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
             ¿QUÉ ES LA DESENSIBILIZACIÓN?
           </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
-            Antes de analizar cómo los medios la producen, es necesario entender qué ocurre en el sistema nervioso cuando la alarma empática se apaga.
+            La exposición repetida puede bajar la intensidad con la que respondemos al sufrimiento que vemos en pantalla.
           </p>
         </div>
 
@@ -57,12 +57,11 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
           <p className="first-letter:text-5xl first-letter:font-['Bebas_Neue'] first-letter:float-left first-letter:mr-3 first-letter:text-[#8B191F]">
-            La desensibilización no es la pérdida de la vista, sino la extinción de la perturbación.
-            En términos psicológicos y neurofisiológicos, se define como la reducción progresiva de la respuesta emocional, cognitiva y motora ante un estímulo que, en circunstancias iniciales, habría provocado una alarma instintiva de supervivencia o un doloroso shock empático.
+            La desensibilización no es dejar de ver: es dejar de sentir la misma perturbación. Con la repetición, una imagen que antes inquietaba puede volverse familiar.
           </p>
 
           <p>
-            Cuando un ser humano ve por primera vez la imagen de un cuerpo mutilado o una ciudad en ruinas, el hipotálamo dispara una descarga inmediata de adrenalina y cortisol. El ritmo cardíaco se dispara; la pupila se dilata; el estómago se comprime. Nuestro cuerpo interpreta el sufrimiento ajeno como una amenaza inminente para la especie: <span className="text-[#DFE4EA] font-bold">hay dolor aquí, por lo tanto debo protegerme o socorrer</span>.
+            Al encontrarnos con violencia, es común sentir alerta, incomodidad o empatía. Esa reacción nos recuerda que detrás de la imagen hay una persona y una situación real.
           </p>
 
           <div className="border border-[#3D4750] bg-[#1C2228] p-5 my-6 font-mono text-sm space-y-3">
@@ -79,7 +78,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           </div>
 
           <p>
-            Sin embargo, el cerebro humano no fue diseñado para ser testigo del dolor global ininterrumpido. Al vivir conectados a servidores que transmiten masacres, linchamientos y catástrofes en tiempo real las 24 horas del día, el sistema nervioso opta por la única estrategia de supervivencia biológica disponible: <span className="text-[#DFE4EA] font-semibold">apagar el receptor</span>. La conmoción se degrada en curiosidad morbosa, la curiosidad en costumbre, y la costumbre, finalmente, en una total e imperceptible indiferencia.
+            En un flujo continuo de noticias e imágenes, la atención se protege reduciendo la respuesta. La conmoción puede convertirse en costumbre; por eso la pausa y el contexto son necesarios.
           </p>
 
           <blockquote className="border-l-2 border-[#8B191F] pl-6 py-2 my-8 font-mono text-base italic text-[#DFE4EA] bg-[#222830]">
@@ -101,23 +100,23 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <div className="border-b border-[#3D4750] pb-4 mb-8">
           <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
             <span className="text-[#8B191F] font-bold">CAPÍTULO 02 // HABITUACIÓN & RENDIMIENTO DECRECIENTE</span>
-            <span>LECTURA: 4 MIN</span>
+            <span>LECTURA: 2 MIN</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
             LA REPETICIÓN
           </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
-            Comprender la habituación perceptual es el paso previo para entender por qué la industria mediática puede monetizar el horror de forma sistemática.
+            Repetir una imagen puede cambiar la forma en que la percibimos y disminuir su impacto inicial.
           </p>
         </div>
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mb-8">
           <p>
-            ¿Por qué la repetición altera nuestra capacidad de conmovernos? La respuesta reside en la ley biológica de los rendimientos decrecientes. El sistema perceptual de los mamíferos funciona mediante el contraste: solo detecta aquello que difiere del entorno basal.
+            Nuestro sistema perceptivo detecta con mayor fuerza lo que rompe la rutina. Cuando el mismo estímulo vuelve una y otra vez, suele perder novedad.
           </p>
 
           <p>
-            Si un trueno estalla en una noche de calma, todo el cuerpo se estremece. Si el trueno retumba cada cuatro segundos durante diez años, los habitantes de la casa terminan durmiendo plácidamente con la ventana abierta. La violencia digital opera bajo la misma física.
+            En redes, una tragedia puede quedar rodeada de publicaciones similares. La repetición no elimina el daño, pero puede hacerlo parecer cotidiano.
           </p>
         </div>
 
@@ -139,7 +138,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
 
         <div className="mt-8 space-y-4 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed">
           <p>
-            Cada nueva catástrofe televisada debe subir la apuesta estética para lograr la misma atención que la catástrofe anterior. Cuando el reporte de diez muertos ya no sacude el café de la mañana, el noticiero necesita transmitir la persecución en vivo; cuando la persecución aburre, se requiere el ángulo de la cámara corporal policial en primera persona, idéntico a un videojuego bélico.
+            Cuando la atención depende del impacto, los medios y las plataformas pueden privilegiar lo más urgente o llamativo. El riesgo es que el dolor termine compitiendo por clics.
           </p>
           <p className="font-mono text-sm text-[#7D878F] border-l-2 border-[#41474F] pl-4">
             "La repetición no limpia la herida; anestesia la piel para que el cirujano pueda seguir cobrando la entrada."
@@ -156,13 +155,13 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <div className="border-b border-[#3D4750] pb-4 mb-8">
           <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
             <span className="text-[#8B191F] font-bold">CAPÍTULO 03 // MERCANTILIZACIÓN & ALGORITMO</span>
-            <span>LECTURA: 5 MIN</span>
+            <span>LECTURA: 2 MIN</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
             LA VIOLENCIA COMO CONTENIDO
           </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
-            Una vez que la habituación garantiza que el umbral de alarma del espectador puede ser recalibrado indefinidamente, la industria mediática convierte ese mecanismo en un modelo de negocio.
+            En las plataformas, una tragedia puede transformarse en una publicación diseñada para captar atención.
           </p>
         </div>
 
@@ -179,11 +178,11 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
           <p>
-            Para que una tragedia humana pueda consumirse en una pantalla de 6 pulgadas mientras esperamos el autobús, primero debe sufrir una metamorfosis radical: debe dejar de ser una catástrofe y transformarse en <strong className="text-[#DFE4EA]">contenido</strong>.
+            Una tragedia se vuelve <strong className="text-[#DFE4EA]">contenido</strong> cuando aparece como una pieza más del feed, junto a entretenimiento, publicidad y conversaciones cotidianas.
           </p>
 
           <p>
-            El contenido no exige responsabilidades morales ni convoca a la movilización colectiva; el contenido exige únicamente <span className="text-[#8B191F] font-bold">tiempo de permanencia (dwell time)</span> y clics. Los motores de recomendación algorítmica descubrieron hace más de una década que las emociones de valencia negativa de alta excitación —especialmente la indignación, el pavor y el morbo— retienen la mirada humana hasta cuatro veces más tiempo que la serenidad o la alegría.
+            Los sistemas de recomendación toman las interacciones como señales. Un clic, una reproducción o un comentario pueden hacer más visible un tipo de contenido, aunque cada plataforma opera de forma distinta.
           </p>
 
           <div className="border border-[#3D4750] bg-[#1C2228] p-6 space-y-4">
@@ -194,12 +193,12 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
               <span className="text-[#7D878F]">CONFIDENCIAL // REV-09</span>
             </div>
             <p className="font-mono text-xs sm:text-sm text-[#DFE4EA] leading-relaxed">
-              "El video del tiroteo en el centro comercial generó un incremento del <InteractiveRedaction hiddenText="+312% de retención publicitaria" onReveal={handleInspect} /> durante las primeras tres horas posteriores al suceso. Los anunciantes de retail y telefonía no retiraron sus pautas debido a que el algoritmo intercaló <InteractiveRedaction hiddenText="marcas de bebidas energéticas" onReveal={handleInspect} /> entre cada repetición del impacto. El espectador promedio reprodujo la escena 4.2 veces."
+              "La publicación aumentó la <InteractiveRedaction hiddenText="retención de audiencia" onReveal={handleInspect} /> durante sus primeras horas. El sistema insertó <InteractiveRedaction hiddenText="publicidad entre las reproducciones" onReveal={handleInspect} />, convirtiendo la atención en una métrica comercial."
             </p>
           </div>
 
           <p>
-            La violencia, por lo tanto, no se propaga a pesar de su horror, sino <em className="text-[#DFE4EA]">gracias a él</em>. Se empaca con miniaturas de alto contraste, círculos rojos trazados sobre siluetas caídas, y titulares sensacionalistas diseñados para hackear el reflejo de alerta. Cuando todo es sangre en la portada, la sangre deja de significar muerte: pasa a significar tráfico de datos.
+            Titulares, miniaturas y avisos pueden aumentar la curiosidad. La pregunta es si ayudan a comprender lo ocurrido o si solo convierten el sufrimiento en tráfico de datos.
           </p>
         </div>
       </article>
@@ -214,13 +213,13 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <div className="border-b border-[#3D4750] pb-4 mb-8">
           <div className="flex items-center justify-between text-xs font-mono text-[#7D878F] mb-2">
             <span className="text-[#8B191F] font-bold">CAPÍTULO 04 // ÉTICA DE LA MIRADA</span>
-            <span>LECTURA: 4 MIN</span>
+            <span>LECTURA: 2 MIN</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
             MIRAR SIN VER
           </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
-            La desensibilización no es solo un fenómeno neurológico ni económico: es, sobre todo, una crisis de la responsabilidad moral del espectador.
+            Mirar no siempre significa comprender: la responsabilidad aparece cuando reconocemos a quienes están detrás de una imagen.
           </p>
         </div>
 
@@ -237,11 +236,11 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
           <p>
-            Existe una grieta profunda e insalvable entre el acto óptico de <strong className="text-[#DFE4EA]">mirar</strong> y el acto moral de <strong className="text-[#8B191F]">ver</strong>.
+            Hay una diferencia entre <strong className="text-[#DFE4EA]">mirar</strong> una imagen y <strong className="text-[#8B191F]">ver</strong> a la persona que aparece en ella.
           </p>
 
           <p>
-            Mirar es una operación mecánica del cristalino y la retina: los fotones inciden sobre las células fotosensibles, se codifican en impulsos bioeléctricos y se almacenan temporalmente en la corteza occipital. Las cámaras de vigilancia miran todo el tiempo; graban accidentes, homicidios y abrazos con la misma indiferencia de cuarzo y silicio. El espectador moderno se ha convertido, gradualmente, en una extensión biológica de esa cámara de seguridad.
+            Mirar puede ser automático: deslizamos, abrimos y pasamos a la siguiente publicación. Ver exige detenerse, buscar contexto y reconocer la dignidad de quien vive el hecho.
           </p>
 
           <div className="border-l-4 border-[#DFE4EA] bg-[#222830] p-6 my-6 space-y-2">
@@ -249,16 +248,16 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
               LA CONDICIÓN DEL VOYEUR DIGITAL
             </h4>
             <p className="font-mono text-sm text-[#BDC6CE] leading-relaxed">
-              Consumimos la violencia a través de una pantalla de cristal líquido que nos otorga la ilusión de omnisciencia con la garantía absoluta de inmunidad física. Sabemos que el proyectil no atravesará el display; por tanto, el sufrimiento ajeno se convierte en un espectáculo sin consecuencias para el observador.
+              La pantalla crea distancia: el daño no ocurre en nuestro cuerpo, pero sí afecta a alguien. Esa distancia puede facilitar que una situación dolorosa se perciba como espectáculo.
             </p>
           </div>
 
           <p>
-            Ver, por el contrario, implica ser interpelado. Ver significa detener el scroll, admitir que el cuerpo que yace sobre el pavimento era un individuo con memoria, madre, temores y proyectos, y experimentar la vergüenza cósmica de seguir vivos e ilesos ante su aniquilación.
+            Ver implica preguntarse qué necesita la situación: ¿más difusión, contexto, una denuncia o simplemente no amplificar una imagen que vulnera a alguien?
           </p>
 
           <p className="text-[#DFE4EA] font-semibold">
-            ¿Cuántas veces al día somos testigos de una tragedia sin dedicarle siquiera los cuatro segundos que tarda una respiración profunda?
+            Una pausa breve puede cambiar la forma en que respondemos ante el sufrimiento ajeno.
           </p>
         </div>
       </article>
