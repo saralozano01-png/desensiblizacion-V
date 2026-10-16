@@ -15,7 +15,7 @@ interface BlogSectionsProps {
 
 function AcademicFigure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
-    <figure className="my-6 overflow-hidden border border-[#3D4750] bg-[#0d1013]">
+    <figure className="mx-auto my-6 w-full max-w-2xl overflow-hidden border border-[#3D4750] bg-[#0d1013]">
       <div className="flex w-full items-center justify-center">
         <img src={src} alt={alt} className="block h-auto w-full object-contain" />
       </div>
