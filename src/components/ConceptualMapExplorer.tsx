@@ -113,16 +113,6 @@ export function ConceptualMapExplorer() {
         <strong className="text-[#DFE4EA]">Cómo leer este blog:</strong> primero se presenta el marco que sostiene el estudio; después, las investigaciones y casos que lo alimentan; finalmente, un desarrollo sobre desensibilización, repetición, circulación algorítmica y ética de la mirada.
       </div>
 
-      <div className="mb-8 border border-[#3D4750] bg-[#1C2228] p-4 sm:p-5">
-        <p className="mb-4 text-[11px] font-mono font-bold tracking-widest text-[#8B191F]">DIAGRAMA DE FLUJO DEL ESTUDIO</p>
-        <div className="grid items-center gap-2 text-center font-mono text-[11px] sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]">
-          <span className="border border-[#3D4750] bg-[#161B20] p-3 text-[#DFE4EA]">IMÁGENES DE VIOLENCIA</span><span className="text-[#8B191F]">→</span>
-          <span className="border border-[#3D4750] bg-[#161B20] p-3 text-[#DFE4EA]">SELECCIÓN Y CIRCULACIÓN</span><span className="text-[#8B191F]">→</span>
-          <span className="border border-[#3D4750] bg-[#161B20] p-3 text-[#DFE4EA]">EXPOSICIÓN Y LECTURA</span><span className="text-[#8B191F]">→</span>
-          <span className="border border-[#8B191F]/60 bg-[#421115]/30 p-3 text-[#DFE4EA]">SENSIBILIDAD SOCIAL</span>
-        </div>
-      </div>
-
       {/* Four concepts that give analytical meaning to the research. */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
         <button
