@@ -56,7 +56,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <AcademicFigure
           src={desensitizationAcademic}
           alt="Ilustración de una mujer rodeada de teléfonos que muestran imágenes violentas"
-          caption="Fig. 1.1 — La exposición repetida a imágenes de violencia en el entorno digital."
+          caption="¿Qué es desensibilización? — Javier Hirschfeld / Getty Images."
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -131,7 +131,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           <AcademicFigure
             src={repetitionAcademic}
             alt="Ilustración de un televisor entre objetos sobre un fondo rojo"
-            caption="Fig. 2.1 — Repetición visual: cuando la violencia se vuelve parte del paisaje mediático."
+            caption="Repetición — Ric Stultz, Drawing on Violence (2006)."
           />
         </div>
 
@@ -167,7 +167,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <AcademicFigure
           src={violenceAsContentAcademic}
           alt="Ilustración de publicaciones violentas circulando en teléfonos móviles"
-          caption="Fig. 3.1 — La violencia convertida en contenido dentro de las plataformas digitales."
+          caption="La violencia como contenido — Kathryn Aurelio / Daily Trojan (2022)."
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -220,7 +220,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <AcademicFigure
           src={lookingWithoutSeeingAcademic}
           alt="Ilustración de una persona frente a una pantalla con los ojos cubiertos"
-          caption="Fig. 4.1 — Mirar sin ver: atención parcial ante la pantalla."
+          caption={'Mirar sin ver — Chris Madden, "Morbid Curiosity" (2013), The Guardian.'}
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
