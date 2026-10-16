@@ -45,7 +45,7 @@ export default function App() {
       }
 
       // Check current section
-      const sections = ['inicio', 'marco-teorico', 'feed', 'recorrido', 'articulos', 'referentes', 'bibliografia', 'reflexion'];
+      const sections = ['inicio', 'introduccion', 'articulos', 'desarrollo', 'feed', 'referentes', 'bibliografia', 'reflexion'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -140,23 +140,23 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <Hero
-          onScrollDown={() => handleNavigate('marco-teorico')}
+          onScrollDown={() => handleNavigate('introduccion')}
           onInitialWarningDismissed={() => {
             setWarningsDismissed((prev) => prev + 1);
           }}
         />
 
-        {/* 1. Punto de partida: investigaciones académicas e imágenes sin censura. */}
+        {/* 1. Introducción: propósito, objeto de estudio y marco que guía el blog. */}
+        <ConceptualMapExplorer />
+
+        {/* 2. Investigaciones que sustentan el recorrido. */}
         <BlogTimeline
           onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
           onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}
         />
 
-        {/* 2. Marco: los cuatro ejes que conectan las investigaciones. */}
-        <ConceptualMapExplorer />
-
-        {/* 3. Recorrido guiado: definición, repetición, algoritmo, ética y feed. */}
-        <div id="recorrido">
+        {/* 3. Desarrollo: definición, repetición, algoritmo, ética y feed. */}
+        <div id="desarrollo">
           <BlogSections
             onRedactionClick={() => setRedactionsRevealed((prev) => prev + 1)}
             onFeedInteraction={() => setFeedInteractions((prev) => prev + 1)}

@@ -19,7 +19,7 @@ export function BibliographySection() {
           <span>APARATO CRÍTICO // FUENTES ACADÉMICAS</span>
         </div>
         <h2 className="text-4xl sm:text-5xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA] leading-none">
-          BIBLIOGRAFÍA & MARCO TEÓRICO
+          BIBLIOGRAFÍA Y FUENTES
         </h2>
         <p className="text-xs font-mono text-[#7D878F] mt-2">
           {academicBibliography.length} fuentes sobre visibilidad, empatía y consumo digital.

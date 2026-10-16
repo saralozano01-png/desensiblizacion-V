@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShieldAlert, Radio, Users, GitBranch, Zap, Layers } from 'lucide-react';
+import { ShieldAlert, Radio, Users, GitBranch, Zap, Layers, BookOpen, Target } from 'lucide-react';
 import { soundFx } from '../utils/audio';
 
 export function ConceptualMapExplorer() {
@@ -68,29 +68,52 @@ export function ConceptualMapExplorer() {
   const current = nodeData[activeNode];
 
   return (
-    <section id="marco-teorico" className="max-w-5xl mx-auto px-4 sm:px-6 my-20 scroll-mt-20">
+    <section id="introduccion" className="max-w-5xl mx-auto px-4 sm:px-6 my-20 scroll-mt-20">
       {/* Section Header */}
       <div className="border-b border-[#3D4750] pb-4 mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 text-xs font-mono text-[#8B191F] mb-2 uppercase font-bold tracking-widest">
             <GitBranch className="w-4 h-4" />
-            <span>DISPOSITIVO TEÓRICO // MARCO ANALÍTICO</span>
+            <span>INTRODUCCIÓN // MARCO TEÓRICO</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA] leading-tight">
-            DESGLOSE TEÓRICO DE LA DESENSIBILIZACIÓN
+            ¿DE QUÉ TRATA ESTA INVESTIGACIÓN?
           </h2>
           <p className="text-sm font-sans text-[#BDC6CE] max-w-xl mt-1">
-            Cuatro ejes conceptuales que estructuran la investigación. Cada nodo articula los aportes teóricos clave y las preguntas que orientan el análisis.
+            Este blog estudia la construcción social de la sensibilidad frente a la violencia: cómo las imágenes, los medios y las plataformas digitales influyen en lo que aprendemos a mirar, sentir, recordar o pasar por alto.
           </p>
         </div>
 
         <div className="bg-[#1C2228] border border-[#3D4750] p-3 text-xs font-mono text-[#7D878F] shrink-0">
-          <span className="text-[#8B191F] font-bold block mb-0.5">EJE CENTRAL:</span>
-          <span className="text-[#DFE4EA] font-bold">¿Quién decide qué merece ser visto?</span>
+          <span className="text-[#8B191F] font-bold block mb-0.5">PREGUNTA ORIENTADORA:</span>
+          <span className="text-[#DFE4EA] font-bold">¿Qué hace que un dolor nos afecte o nos resulte cotidiano?</span>
         </div>
       </div>
 
-      {/* Interactive Core Diagram / Navigation Grid */}
+      <div className="grid gap-4 md:grid-cols-2 mb-8">
+        <article className="border border-[#3D4750] bg-[#1C2228] p-5">
+          <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-[#8B191F] mb-3">
+            <BookOpen className="w-4 h-4" /> PUNTO DE PARTIDA
+          </div>
+          <p className="font-sans text-sm leading-relaxed text-[#BDC6CE]">
+            La investigación nace de una experiencia cotidiana: en un mismo feed conviven noticias de guerra, accidentes, memes, publicidad y conversaciones personales. Esa cercanía constante con el sufrimiento no es neutral; organiza nuestra atención y puede transformar la conmoción en hábito.
+          </p>
+        </article>
+        <article className="border border-[#3D4750] bg-[#1C2228] p-5">
+          <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-[#8B191F] mb-3">
+            <Target className="w-4 h-4" /> PROPÓSITO DEL BLOG
+          </div>
+          <p className="font-sans text-sm leading-relaxed text-[#BDC6CE]">
+            El recorrido propone reconocer los mecanismos que seleccionan, censuran y hacen circular imágenes de violencia. No busca medir ni juzgar la empatía de quien lo visita: invita a pensar qué responsabilidades aparecen al mirar, compartir y recordar el dolor ajeno.
+          </p>
+        </article>
+      </div>
+
+      <div className="border-l-2 border-[#8B191F] bg-[#222830] p-4 mb-8 font-mono text-xs sm:text-sm leading-relaxed text-[#BDC6CE]">
+        <strong className="text-[#DFE4EA]">Cómo leer este blog:</strong> primero se presenta el marco que sostiene el estudio; después, las investigaciones y casos que lo alimentan; finalmente, un desarrollo sobre desensibilización, repetición, circulación algorítmica y ética de la mirada.
+      </div>
+
+      {/* Four concepts that give analytical meaning to the research. */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
         <button
           onClick={() => handleSelectNode('censura')}

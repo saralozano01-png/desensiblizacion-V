@@ -56,7 +56,7 @@ export function BlogTimeline({ onArticleRead, onRedactionReveal }: BlogTimelineP
         </h2>
 
         <p className="font-sans text-sm sm:text-base text-[#BDC6CE] max-w-2xl mt-3 leading-relaxed">
-          Cinco artículos de investigación para iniciar el recorrido. Sus imágenes académicas se presentan completas; abre solo el análisis que quieras profundizar.
+          Cinco investigaciones que sustentan este blog. Después de conocer el marco teórico, explora los casos, autores y preguntas que amplían el estudio.
         </p>
       </div>
 

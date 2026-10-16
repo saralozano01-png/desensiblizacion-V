@@ -140,14 +140,14 @@ export function Hero({ onScrollDown, onInitialWarningDismissed }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 pb-6 flex items-center justify-between text-xs font-mono text-[#7D878F]">
         <div className="flex items-center gap-2">
           <Eye className="w-3.5 h-3.5 text-[#8B191F]" />
-          <span className="text-[#DFE4EA]">INVESTIGACIÓN VISUAL // ORDEN CRONOLÓGICO INVERSO</span>
+          <span className="text-[#DFE4EA]">INVESTIGACIÓN VISUAL // CONSTRUCCIÓN SOCIAL DE LA SENSIBILIDAD</span>
         </div>
 
         <button
           onClick={onScrollDown}
           className="flex items-center gap-2 text-[#BDC6CE] hover:text-[#DFE4EA] transition-colors cursor-pointer group"
         >
-          <span className="tracking-widest">INGRESAR A LOS ARTÍCULOS</span>
+          <span className="tracking-widest">LEER LA INTRODUCCIÓN</span>
           <ArrowDown className="w-4 h-4 text-[#8B191F] group-hover:translate-y-1 transition-transform" />
         </button>
       </div>

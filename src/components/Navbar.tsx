@@ -30,10 +30,10 @@ export function Navbar({
 
   const navLinks = [
     { id: 'inicio', label: 'INICIO' },
-    { id: 'marco-teorico', label: 'MARCO' },
-    { id: 'recorrido', label: 'RECORRIDO' },
-    { id: 'feed', label: 'FEED' },
+    { id: 'introduccion', label: 'INTRODUCCIÓN' },
     { id: 'articulos', label: 'INVESTIGACIÓN' },
+    { id: 'desarrollo', label: 'DESARROLLO' },
+    { id: 'feed', label: 'FEED' },
     { id: 'referentes', label: 'REFERENTES' },
     { id: 'bibliografia', label: 'FUENTES' },
     { id: 'reflexion', label: 'CIERRE' }
