@@ -1,23 +1,32 @@
-import { useState } from 'react';
 import { FileText } from 'lucide-react';
 import { InteractiveRedaction } from './InteractiveRedaction';
 import { HabituationChart } from './HabituationChart';
 import { SimulatedSocialFeed } from './SimulatedSocialFeed';
-import { CensoredMediaCard } from './CensoredMediaCard';
 import { soundFx } from '../utils/audio';
-import sectionDesensitization from '../assets/images/section_desensitization.jpg';
-import sectionRepetition from '../assets/images/section_repetition.jpg';
-import sectionViolenceContent from '../assets/images/section_violence_content.jpg';
-import sectionLookingWithoutSeeing from '../assets/images/section_looking_without_seeing.jpg';
+import desensitizationAcademic from '../assets/images/desensitization_academic.png';
+import repetitionAcademic from '../assets/images/repetition_academic.png';
+import violenceAsContentAcademic from '../assets/images/violence_as_content_academic.png';
+import lookingWithoutSeeingAcademic from '../assets/images/looking_without_seeing_academic.jpeg';
 
 interface BlogSectionsProps {
   onRedactionClick: () => void;
   onFeedInteraction: () => void;
 }
 
-export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectionsProps) {
-  const [cctvTimestamp] = useState('03:42:18:09');
+function AcademicFigure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 overflow-hidden border border-[#3D4750] bg-[#0d1013]">
+      <div className="flex aspect-16/9 items-center justify-center p-2 sm:p-3">
+        <img src={src} alt={alt} className="h-full w-full object-contain" />
+      </div>
+      <figcaption className="border-t border-[#2F3339] bg-[#1C2228] px-3 py-2 text-xs font-mono italic text-[#BDC6CE]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
+export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectionsProps) {
   const handleInspect = () => {
     soundFx.playClick();
     onRedactionClick();
@@ -44,15 +53,10 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           </p>
         </div>
 
-        <CensoredMediaCard
-          imageSrc={sectionDesensitization}
-          altText="Pasajeros consumiendo noticias en dispositivos móviles en la penumbra"
-          caseCode="REGISTRO-01 // UMBRAL URBANO"
-          title="Consumo de violencia en tránsito cotidiano"
-          censorBarText="██████████ [IDENTIDAD DE TESTIGOS PROTEGIDA]"
-          caption="Fig. 1.1 — La textura del consumo repetido convierte lo sensible en una superficie cotidiana."
-          aspectRatio="16:9"
-          initialCensored={true}
+        <AcademicFigure
+          src={desensitizationAcademic}
+          alt="Ilustración de una mujer rodeada de teléfonos que muestran imágenes violentas"
+          caption="Fig. 1.1 — La exposición repetida a imágenes de violencia en el entorno digital."
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -124,15 +128,10 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <HabituationChart />
 
         <div className="my-8">
-          <CensoredMediaCard
-            imageSrc={sectionRepetition}
-            altText="Muro de pantallas y monitores de vigilancia analógica con estática y señales bloqueadas"
-            caseCode="SISTEMA-CCTV // CABINA 04"
-            title="Saturación de canales en simultáneo"
-            censorBarText="██████████ [TRANSMISIÓN INTERRUMPIDA POR SEÑAL DE ALERTA]"
-            caption="Fig. 2.1 — Repetición visual: señales que persisten hasta volverse parte del fondo."
-            aspectRatio="16:9"
-            initialCensored={true}
+          <AcademicFigure
+            src={repetitionAcademic}
+            alt="Ilustración de un televisor entre objetos sobre un fondo rojo"
+            caption="Fig. 2.1 — Repetición visual: cuando la violencia se vuelve parte del paisaje mediático."
           />
         </div>
 
@@ -165,15 +164,10 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           </p>
         </div>
 
-        <CensoredMediaCard
-          imageSrc={sectionViolenceContent}
-          altText="Dossier de periódicos y expedientes fuertemente tachados con tinta negra"
-          caseCode="EXP-FORENSE // DOSSIER 802"
-          title="Tragedia comercializada como métrica de retención"
-          censorBarText="████████████████ [DOCUMENTO JUDICIAL CLASIFICADO]"
-          caption="Fig. 3.1 — La violencia como contenido: una imagen simbólica que evita mostrar daño explícito."
-          aspectRatio="16:9"
-          initialCensored={true}
+        <AcademicFigure
+          src={violenceAsContentAcademic}
+          alt="Ilustración de publicaciones violentas circulando en teléfonos móviles"
+          caption="Fig. 3.1 — La violencia convertida en contenido dentro de las plataformas digitales."
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -223,15 +217,10 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           </p>
         </div>
 
-        <CensoredMediaCard
-          imageSrc={sectionLookingWithoutSeeing}
-          altText="Cámara de vigilancia registrando una encrucijada urbana desierta bajo la lluvia"
-          caseCode={`CCTV-CAM-08 // ${cctvTimestamp}`}
-          title="Encrucijada bajo vigilancia automatizada"
-          censorBarText="██████████ [UBICACIÓN GEOGRÁFICA RESERVADA]"
-          caption="Mirar sin ver: la imagen permanece, pero la atención puede desplazarse."
-          aspectRatio="16:9"
-          initialCensored={true}
+        <AcademicFigure
+          src={lookingWithoutSeeingAcademic}
+          alt="Ilustración de una persona frente a una pantalla con los ojos cubiertos"
+          caption="Fig. 4.1 — Mirar sin ver: atención parcial ante la pantalla."
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
