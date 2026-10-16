@@ -2,17 +2,7 @@ import { useState } from 'react';
 import { Calendar, Clock, User, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 import { blogArticlesChronologicalReverse } from '../data/blogArticles';
 import { InteractiveRedaction } from './InteractiveRedaction';
-import { CensoredMediaCard } from './CensoredMediaCard';
 import { soundFx } from '../utils/audio';
-import roslerWorkOne from '../assets/images/rosler_house_beautiful_01.png';
-import roslerWorkTwo from '../assets/images/rosler_house_beautiful_02.png';
-import roslerWorkThree from '../assets/images/rosler_house_beautiful_03.png';
-
-const academicWorks = [
-  { src: roslerWorkOne, alt: 'Obra de Martha Rosler con interior doméstico y presencia militar.', label: 'Obra 01 · Interior, conflicto y distancia' },
-  { src: roslerWorkTwo, alt: 'Obra de Martha Rosler con interior doméstico y escena de guerra.', label: 'Obra 02 · La guerra entra a la sala' },
-  { src: roslerWorkThree, alt: 'Obra de Martha Rosler con una figura reclinada ante un escenario de conflicto.', label: 'Obra 03 · Descanso, medios y violencia' }
-];
 
 interface BlogTimelineProps {
   onArticleRead: () => void;
@@ -38,41 +28,19 @@ export function BlogTimeline({ onArticleRead, onRedactionReveal }: BlogTimelineP
   };
 
   return (
-    <section id="articulos" className="max-w-4xl mx-auto px-4 sm:px-6 my-16 scroll-mt-20 space-y-16">
-      {/* Blog Section Header */}
-      <div className="border-b-2 border-[#8B191F] pb-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono text-[#7D878F] mb-2">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 bg-[#8B191F] animate-warning-fast" />
-            <span className="text-[#8B191F] font-bold">BITÁCORA TEÓRICA & ENSAYOS VISUALES</span>
-          </div>
-          <span className="text-[#DFE4EA] font-bold bg-[#222830] px-2.5 py-1 border border-[#3D4750]">
-            ORDEN CRONOLÓGICO INVERSO (5 ARTÍCULOS)
-          </span>
+    <section id="referentes-teoricos" className="max-w-4xl mx-auto px-4 sm:px-6 my-20 scroll-mt-20 space-y-10">
+      <div className="border-b-2 border-[#8B191F] pb-5">
+        <div className="flex items-center gap-2 text-xs font-mono text-[#8B191F] mb-2 uppercase font-bold tracking-widest">
+          <span className="w-2.5 h-2.5 bg-[#8B191F] animate-warning-fast" />
+          REFERENTES TEÓRICOS
         </div>
-
-        <h2 className="text-4xl sm:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA] leading-none">
-          PUNTO DE PARTIDA ACADÉMICO
+        <h2 className="text-4xl sm:text-5xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA] leading-none">
+          INVESTIGACIONES Y AUTORES CLAVE
         </h2>
-
-        <p className="font-sans text-sm sm:text-base text-[#BDC6CE] max-w-2xl mt-3 leading-relaxed">
-          Cinco investigaciones que sustentan este blog. Después de conocer el marco teórico, explora los casos, autores y preguntas que amplían el estudio.
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#BDC6CE]">
+          Cinco textos que amplían los conceptos del marco teórico y orientan el análisis de la sensibilidad frente a la violencia.
         </p>
       </div>
-
-      <section aria-label="Obras académicas de Martha Rosler" className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        {academicWorks.map((work) => (
-          <figure key={work.label} className="overflow-hidden border border-[#3D4750] bg-[#0d1013]">
-            <div className="aspect-4/3 flex items-center justify-center">
-              <img src={work.src} alt={work.alt} className="h-full w-full object-contain" />
-            </div>
-            <figcaption className="border-t border-[#2F3339] bg-[#1C2228] px-3 py-2 font-mono text-[11px] text-[#BDC6CE]">
-              Martha Rosler · <span className="italic">House Beautiful: Bringing the War Home</span><br />
-              <span className="text-[#7D878F]">{work.label}</span>
-            </figcaption>
-          </figure>
-        ))}
-      </section>
 
       {/* Chronological Reverse Articles Stream */}
       <div className="space-y-16">

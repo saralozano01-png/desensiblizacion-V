@@ -45,7 +45,7 @@ export default function App() {
       }
 
       // Check current section
-      const sections = ['inicio', 'introduccion', 'articulos', 'desarrollo', 'feed', 'referentes', 'bibliografia', 'reflexion'];
+      const sections = ['inicio', 'introduccion', 'desarrollo', 'feed', 'referentes-artisticos', 'referentes-teoricos', 'bibliografia', 'reflexion'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -149,13 +149,7 @@ export default function App() {
         {/* 1. Introducción: propósito, objeto de estudio y marco que guía el blog. */}
         <ConceptualMapExplorer />
 
-        {/* 2. Investigaciones que sustentan el recorrido. */}
-        <BlogTimeline
-          onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
-          onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}
-        />
-
-        {/* 3. Desarrollo: definición, repetición, algoritmo, ética y feed. */}
+        {/* 2. Desarrollo: definición, repetición, algoritmo, ética y feed. */}
         <div id="desarrollo">
           <BlogSections
             onRedactionClick={() => setRedactionsRevealed((prev) => prev + 1)}
@@ -173,8 +167,12 @@ export default function App() {
           secondsElapsed={secondsElapsed}
         />
 
-        {/* 5. Referentes visuales, luego fuentes para quien quiera comprobarlas. */}
+        {/* 4. Referentes artísticos, seguidos por los referentes teóricos. */}
         <ArtReferentsSection />
+        <BlogTimeline
+          onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
+          onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}
+        />
         <BibliographySection />
         {/* 7. Final Confrontation & Retrospective Intelligent Audit */}
         <FinalReflection

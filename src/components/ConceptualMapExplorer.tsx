@@ -109,10 +109,6 @@ export function ConceptualMapExplorer() {
         </article>
       </div>
 
-      <div className="border-l-2 border-[#8B191F] bg-[#222830] p-4 mb-8 font-mono text-xs sm:text-sm leading-relaxed text-[#BDC6CE]">
-        <strong className="text-[#DFE4EA]">Cómo leer este blog:</strong> primero se presenta el marco que sostiene el estudio; después, las investigaciones y casos que lo alimentan; finalmente, un desarrollo sobre desensibilización, repetición, circulación algorítmica y ética de la mirada.
-      </div>
-
       {/* Four concepts that give analytical meaning to the research. */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
         <button

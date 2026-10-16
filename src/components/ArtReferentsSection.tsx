@@ -11,7 +11,7 @@ const roslerWorks = [
 
 export function ArtReferentsSection() {
   return (
-    <section id="referentes" className="max-w-4xl mx-auto px-4 sm:px-6 my-20 scroll-mt-20 space-y-10">
+    <section id="referentes-artisticos" className="max-w-4xl mx-auto px-4 sm:px-6 my-20 scroll-mt-20 space-y-10">
       <div className="border-b border-[#3D4750] pb-4">
         <div className="flex items-center gap-2 text-xs font-mono text-[#8B191F] mb-2 uppercase font-bold tracking-widest"><Palette className="w-4 h-4" /> REFERENTES ARTÍSTICOS Y VISUALES</div>
         <h2 className="text-4xl sm:text-5xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA] leading-none">EL ARTE ANTE EL CONSUMO DEL DOLOR</h2>
