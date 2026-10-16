@@ -59,7 +59,7 @@ export function CensoredMediaCard({
           src={imageSrc}
           alt={altText}
           referrerPolicy="no-referrer"
-          className={`w-full h-full object-contain transition-all duration-500 ${isHidden ? 'scale-105 blur-md brightness-75' : ''}`}
+          className={`w-full h-full object-cover object-center transition-all duration-500 ${isHidden ? 'scale-105 blur-md brightness-75' : ''}`}
         />
 
         {isHidden ? (
