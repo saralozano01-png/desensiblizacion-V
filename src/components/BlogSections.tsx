@@ -53,7 +53,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <AcademicFigure
           src={desensitizationAcademic}
           alt="Ilustración de una mujer rodeada de teléfonos que muestran imágenes violentas"
-          caption="¿Qué es desensibilización? — Javier Hirschfeld / Getty Images."
+          caption="Javier Hirschfeld / Getty Images."
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -125,7 +125,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
           <AcademicFigure
             src={repetitionAcademic}
             alt="Ilustración de un televisor entre objetos sobre un fondo rojo"
-            caption="Repetición — Ric Stultz, Drawing on Violence (2006)."
+            caption="Ric Stultz, Drawing on Violence (2006)."
           />
         </div>
 
@@ -158,7 +158,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <AcademicFigure
           src={violenceAsContentAcademic}
           alt="Ilustración de publicaciones violentas circulando en teléfonos móviles"
-          caption="La violencia como contenido — Kathryn Aurelio / Daily Trojan (2022)."
+          caption="Kathryn Aurelio / Daily Trojan (2022)."
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
@@ -208,7 +208,7 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
         <AcademicFigure
           src={lookingWithoutSeeingAcademic}
           alt="Ilustración de una persona frente a una pantalla con los ojos cubiertos"
-          caption={'Mirar sin ver — Chris Madden, "Morbid Curiosity" (2013), The Guardian.'}
+          caption={'Chris Madden, "Morbid Curiosity" (2013), The Guardian.'}
         />
 
         <div className="space-y-6 font-sans text-base sm:text-lg text-[#BDC6CE] leading-relaxed mt-6">
