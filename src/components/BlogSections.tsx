@@ -16,8 +16,8 @@ interface BlogSectionsProps {
 function AcademicFigure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <figure className="my-6 overflow-hidden border border-[#3D4750] bg-[#0d1013]">
-      <div className="flex aspect-16/9 items-center justify-center p-2 sm:p-3">
-        <img src={src} alt={alt} className="h-full w-full object-contain" />
+      <div className="flex w-full items-center justify-center">
+        <img src={src} alt={alt} className="block h-auto w-full object-contain" />
       </div>
       <figcaption className="border-t border-[#2F3339] bg-[#1C2228] px-3 py-2 text-xs font-mono italic text-[#BDC6CE]">
         {caption}
