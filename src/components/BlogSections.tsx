@@ -45,9 +45,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             <span className="text-[#8B191F] font-bold">CAPÍTULO 01 // DEFINICIÓN & MECANISMO</span>
             <span>LECTURA: 2 MIN</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
-            ¿QUÉ ES LA DESENSIBILIZACIÓN?
-          </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
             La exposición repetida puede bajar la intensidad con la que respondemos al sufrimiento que vemos en pantalla.
           </p>
@@ -106,9 +103,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             <span className="text-[#8B191F] font-bold">CAPÍTULO 02 // HABITUACIÓN & RENDIMIENTO DECRECIENTE</span>
             <span>LECTURA: 2 MIN</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
-            LA REPETICIÓN
-          </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
             Repetir una imagen puede cambiar la forma en que la percibimos y disminuir su impacto inicial.
           </p>
@@ -156,9 +150,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             <span className="text-[#8B191F] font-bold">CAPÍTULO 03 // MERCANTILIZACIÓN & ALGORITMO</span>
             <span>LECTURA: 2 MIN</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
-            LA VIOLENCIA COMO CONTENIDO
-          </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
             En las plataformas, una tragedia puede transformarse en una publicación diseñada para captar atención.
           </p>
@@ -209,9 +200,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             <span className="text-[#8B191F] font-bold">CAPÍTULO 04 // ÉTICA DE LA MIRADA</span>
             <span>LECTURA: 2 MIN</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
-            MIRAR SIN VER
-          </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
             Mirar no siempre significa comprender: la responsabilidad aparece cuando reconocemos a quienes están detrás de una imagen.
           </p>
@@ -262,9 +250,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
             <span className="text-[#8B191F] font-bold">CAPÍTULO 05 // EL DISPOSITIVO EN ACCIÓN</span>
             <span>INTERACCIÓN CONTINUA</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-['Bebas_Neue'] tracking-wide text-[#DFE4EA]">
-            REDES SOCIALES: LA YUXTAPOSICIÓN MONSTRUOSA
-          </h2>
           <p className="font-sans text-sm text-[#BDC6CE] mt-3 max-w-2xl leading-relaxed">
             Lo que acabas de leer no es teoría abstracta: ocurre exactamente en este feed, en este momento. Desliza e interactúa. Observa qué coexiste con qué.
           </p>

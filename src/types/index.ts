@@ -9,6 +9,7 @@ export interface FeedItem {
   censored: boolean;
   censoredLabel?: string;
   imageSrc?: string;
+  imageCredit?: string;
   censorLevel?: 'heavy' | 'medium' | 'partial';
   imagePromptDescription?: string;
   likes: number;

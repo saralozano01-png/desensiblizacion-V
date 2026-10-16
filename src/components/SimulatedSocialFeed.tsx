@@ -135,7 +135,7 @@ export function SimulatedSocialFeed({ onInteraction }: SimulatedSocialFeedProps)
                   altText={post.headline}
                   caseCode={`CASO-${post.id.toUpperCase()}`}
                   censorBarText={post.censoredLabel || '██████████ [CONTENIDO CENSURADO]'}
-                  caption={post.headline}
+                  caption={post.imageCredit || post.headline}
                   aspectRatio="16:9"
                   initialCensored={true}
                 />
