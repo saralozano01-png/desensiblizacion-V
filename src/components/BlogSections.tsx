@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FileText, Image as ImageIcon } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import { InteractiveRedaction } from './InteractiveRedaction';
 import { HabituationChart } from './HabituationChart';
 import { SimulatedSocialFeed } from './SimulatedSocialFeed';
@@ -9,10 +9,6 @@ import sectionDesensitization from '../assets/images/section_desensitization.jpg
 import sectionRepetition from '../assets/images/section_repetition.jpg';
 import sectionViolenceContent from '../assets/images/section_violence_content.jpg';
 import sectionLookingWithoutSeeing from '../assets/images/section_looking_without_seeing.jpg';
-import archiveNight from '../assets/images/archive_night.jpg';
-import archivePerimeter from '../assets/images/archive_perimeter.jpg';
-import archiveForensic from '../assets/images/archive_forensic.jpg';
-import archiveMemory from '../assets/images/archive_memory.jpg';
 
 interface BlogSectionsProps {
   onRedactionClick: () => void;
@@ -288,70 +284,6 @@ export function BlogSections({ onRedactionClick, onFeedInteraction }: BlogSectio
 
         <SimulatedSocialFeed onInteraction={onFeedInteraction} />
 
-        {/* Galería de registro visual — integrada como extensión del feed,  */}
-        {/* no como sección separada                                          */}
-        <div className="mt-16 border-t border-[#3D4750] pt-12">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-8">
-            <div>
-              <div className="text-[11px] font-mono text-[#8B191F] font-bold tracking-widest uppercase flex items-center gap-1.5">
-                <ImageIcon className="w-3.5 h-3.5" />
-                ARCHIVO VISUAL COMPLEMENTARIO
-              </div>
-              <h3 className="font-['Bebas_Neue'] text-3xl sm:text-4xl tracking-wide text-[#DFE4EA] mt-1">
-                REGISTRO FOTOGRÁFICO BAJO CENSURA
-              </h3>
-              <p className="text-xs font-mono text-[#7D878F] mt-1 max-w-md">
-                Las fotografías que no llegaron al feed. Haz clic en "Ver ahora" o en "MODO" para alternar los niveles de censura.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <CensoredMediaCard
-              imageSrc={archiveNight}
-              altText="Multitud silueteada en disturbio nocturno bajo la niebla"
-              caseCode="CASO-01 // NOCHE PERIFÉRICA"
-              title="Disturbios y siluetas anónimas"
-              censorBarText="██████████ [ROSTROS CENSURADOS]"
-              caption="Archivo visual 01 — Flor seca como señal de memoria y deterioro."
-              aspectRatio="4:3"
-              initialCensored={true}
-            />
-
-            <CensoredMediaCard
-              imageSrc={archivePerimeter}
-              altText="Perímetro policial nocturno con luces de emergencia"
-              caseCode="CASO-02 // PERÍMETRO POLICIAL"
-              title="Zona de balacera acordonada"
-              censorBarText="██████████ [NÚMERO DE PATRULLA RESERVADO]"
-              caption="Archivo visual 02 — Fruta intervenida como metáfora de un perímetro sensible."
-              aspectRatio="4:3"
-              initialCensored={true}
-            />
-
-            <CensoredMediaCard
-              imageSrc={archiveForensic}
-              altText="Inspección forense al amanecer en predio baldío"
-              caseCode="CASO-03 // CORDÓN FORENSE"
-              title="Levantamiento en predio industrial"
-              censorBarText="██████████ [EVIDENCIA OCULTA AL PÚBLICO]"
-              caption="Archivo visual 03 — Granada en sombra: registro simbólico de lo que se oculta."
-              aspectRatio="4:3"
-              initialCensored={true}
-            />
-
-            <CensoredMediaCard
-              imageSrc={archiveMemory}
-              altText="Muro callejero con afiches de personas desaparecidas"
-              caseCode="CASO-04 // MEMORIA CALLEJERA"
-              title="Fichas de búsqueda deterioradas"
-              censorBarText="██████████ [DATOS PERSONALES PROTEGIDOS]"
-              caption="Archivo visual 04 — Composición abstracta de memoria, exposición y censura."
-              aspectRatio="4:3"
-              initialCensored={true}
-            />
-          </div>
-        </div>
       </section>
 
     </div>

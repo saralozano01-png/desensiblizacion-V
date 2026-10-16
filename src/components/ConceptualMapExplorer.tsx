@@ -17,7 +17,7 @@ export function ConceptualMapExplorer() {
       theorists: 'Judith Butler · Stanley Cohen',
       tags: ['Algorítmica', 'Institucional', 'Pixelado', 'Desenfoque', 'Advertencia'],
       description:
-        'La censura nunca es un acto puramente técnico o neutral. Opera en dos niveles: institucional (códigos penales, leyes estatales y secretismo oficial) y algorítmico (las normas comunitarias automatizadas de Meta, TikTok y X). Su intervención material —a través de pixelados, blur y pantallas de "Contenido Sensible"— ejerce una tutela moral sobre la comunidad consumidora, decidiendo qué crímenes se vuelven materia de debate público y cuáles son arrojados al silencio o desclasificados selectivamente.',
+        'La censura regula qué imágenes se muestran y bajo qué condiciones. Puede cuidar la dignidad de una persona, pero también limitar qué violencias entran en la conversación pública.',
       questions: [
         '¿A quién protege realmente el desenfoque: a la dignidad de la víctima o a la tranquilidad del espectador?',
         '¿Cómo la censura selectiva produce una ceguera voluntaria en la comunidad?',
@@ -30,7 +30,7 @@ export function ConceptualMapExplorer() {
       theorists: 'Suzanne Oosterwijk · Jeanne Funk Brockmyer · Susan Sontag',
       tags: ['True Crime', 'Accidentes', 'Viralidad', 'Saturación', 'Morbo', 'Desensibilización'],
       description:
-        'En el polo opuesto de la censura está la sobreexposición ininterrumpida. Géneros enteros de la red (True Crime, hilos de accidentes, filtraciones de peleas callejeras y canales de Telegram) circulan a gran velocidad. La respuesta psicológica del usuario ante este flujo es triple: una empatía fugaz que colapsa ante la saturación, una curiosidad mórbida biológicamente recompensada por el estriado ventral (Oosterwijk) y una desensibilización progresiva del sistema nervioso (Funk Brockmyer).',
+        'La exposición es la repetición y velocidad con que circula una imagen. Cuando el dolor aparece sin pausa entre otros estímulos, puede pasar de conmover a formar parte del fondo cotidiano.',
       questions: [
         '¿En qué momento la saturación de imágenes de dolor deja de informar y comienza a anestesiar?',
         '¿Por qué la mente busca voluntariamente ver escenas de peligro letal?',
@@ -43,7 +43,7 @@ export function ConceptualMapExplorer() {
       theorists: 'Judith Butler (Frames of War) · Paul Slovic (Psychic Numbing)',
       tags: ['Víctima Identificable', 'No Identificable', 'Psychic Numbing', 'Titulares', 'Encuadre'],
       description:
-        'La forma en que se encuadra un hecho violento determina si la audiencia sentirá indignación o indiferencia. Cuando los medios presentan a la víctima con nombre, historia familiar y rostro reconocible, activan la empatía individual. Pero cuando se presentan masas abstractas o números impersonales, ocurre el entumecimiento psíquico ("Psychic Numbing" de Paul Slovic): la respuesta afectiva se desploma a cero. El "frame" (Butler) decide qué vida es digna de ser llorada (grievable) y cuál es descartada como daño colateral.',
+        'La representación es el encuadre que da rostro, contexto o reduce un hecho a una cifra. Esos marcos influyen en qué vidas se reconocen como vulnerables y dignas de duelo.',
       questions: [
         '¿Por qué nos conmueve la muerte de una persona concreta pero ignoramos 10.000 muertos en un titular?',
         '¿Cómo los titulares sensacionalistas manipulan la escala de gravedad del suceso?',
@@ -56,7 +56,7 @@ export function ConceptualMapExplorer() {
       theorists: 'E. Morales (2025) · Thomas et al. (2018) · Ariella Azoulay',
       tags: ['Proximidad Física', 'Proximidad Cultural', 'Consumo Pasivo', 'Circulación Activa', 'Memes'],
       description:
-        'Nuestra relación con la violencia depende de la proximidad: física, social, cultural y emocional. En el caso de los jóvenes universitarios frecuentes en redes sociales, la comunidad consumidora oscila entre el consumo pasivo (el swipe distraído que tolera cualquier atrocidad en pantalla) y la circulación activa (compartir en stories, comentar, republicar o convertir la tragedia en memes de humor negro). Esta mediación cotidiana redefine los lazos éticos y el pacto de ciudadanía visual (Azoulay).',
+        'La comunidad participa cuando ve, comenta, comparte o decide no amplificar una imagen. La proximidad social y cultural cambia la respuesta, pero cada interacción también modifica su circulación.',
       questions: [
         '¿Cómo influye la proximidad geográfica o cultural en la intensidad de nuestra respuesta afectiva?',
         '¿El acto de compartir una tragedia en redes sociales genera solidaridad real o simple alivio de culpa digital?',
@@ -111,6 +111,16 @@ export function ConceptualMapExplorer() {
 
       <div className="border-l-2 border-[#8B191F] bg-[#222830] p-4 mb-8 font-mono text-xs sm:text-sm leading-relaxed text-[#BDC6CE]">
         <strong className="text-[#DFE4EA]">Cómo leer este blog:</strong> primero se presenta el marco que sostiene el estudio; después, las investigaciones y casos que lo alimentan; finalmente, un desarrollo sobre desensibilización, repetición, circulación algorítmica y ética de la mirada.
+      </div>
+
+      <div className="mb-8 border border-[#3D4750] bg-[#1C2228] p-4 sm:p-5">
+        <p className="mb-4 text-[11px] font-mono font-bold tracking-widest text-[#8B191F]">DIAGRAMA DE FLUJO DEL ESTUDIO</p>
+        <div className="grid items-center gap-2 text-center font-mono text-[11px] sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]">
+          <span className="border border-[#3D4750] bg-[#161B20] p-3 text-[#DFE4EA]">IMÁGENES DE VIOLENCIA</span><span className="text-[#8B191F]">→</span>
+          <span className="border border-[#3D4750] bg-[#161B20] p-3 text-[#DFE4EA]">SELECCIÓN Y CIRCULACIÓN</span><span className="text-[#8B191F]">→</span>
+          <span className="border border-[#3D4750] bg-[#161B20] p-3 text-[#DFE4EA]">EXPOSICIÓN Y LECTURA</span><span className="text-[#8B191F]">→</span>
+          <span className="border border-[#8B191F]/60 bg-[#421115]/30 p-3 text-[#DFE4EA]">SENSIBILIDAD SOCIAL</span>
+        </div>
       </div>
 
       {/* Four concepts that give analytical meaning to the research. */}

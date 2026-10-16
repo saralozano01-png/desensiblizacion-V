@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Eye, EyeOff, ShieldAlert, Sliders } from 'lucide-react';
+import { EyeOff, ShieldAlert, Sliders } from 'lucide-react';
 import { soundFx } from '../utils/audio';
 
 interface CensoredMediaCardProps {
@@ -23,24 +23,18 @@ export function CensoredMediaCard({
   censorBarText = '██████████ [CONTENIDO CENSURADO]',
   aspectRatio = '16:9'
 }: CensoredMediaCardProps) {
-  // 0: Full Blackout (Crossed Eye "Contenido Sensible")
-  // 1: Censored Photograph (Visible photo with heavy black bars, stamps, noise)
-  // 2: Attenuated / Partially Desensitized (Translucent bars)
-  const [censorMode, setCensorMode] = useState<0 | 1 | 2>(initialCensored ? 0 : 1);
+  // La censura conserva la imagen visible: usa desenfoque y capas traslúcidas,
+  // no un bloqueo negro que elimine por completo el contexto visual.
+  const [censorMode, setCensorMode] = useState<1 | 2>(initialCensored ? 1 : 2);
 
   const cycleCensorship = () => {
     soundFx.playWarningBeep();
-    setCensorMode((prev) => (prev === 0 ? 1 : prev === 1 ? 2 : 0));
-  };
-
-  const handleReveal = () => {
-    soundFx.playWarningBeep();
-    setCensorMode(1);
+    setCensorMode((prev) => (prev === 1 ? 2 : 1));
   };
 
   const handleHide = () => {
     soundFx.playClick();
-    setCensorMode(0);
+    setCensorMode(1);
   };
 
   const aspectClass =
@@ -58,18 +52,12 @@ export function CensoredMediaCard({
         <div className="flex items-center gap-3">
           <span
             className={`px-2 py-0.5 text-[10px] font-bold uppercase ${
-              censorMode === 0
+              censorMode === 1
                 ? 'bg-[#421115] text-[#DFE4EA] border border-[#8B191F]/60'
-                : censorMode === 1
-                ? 'bg-[#222830] text-[#BDC6CE] border border-[#3D4750]'
-                : 'bg-[#161B20] text-[#7D878F]'
+                : 'bg-[#222830] text-[#BDC6CE] border border-[#3D4750]'
             }`}
           >
-            {censorMode === 0
-              ? 'FILTRO TOTAL'
-              : censorMode === 1
-              ? 'FOTO CENSURADA'
-              : 'ATENUACIÓN BAJA'}
+            {censorMode === 1 ? 'FILTRO DIFUSO' : 'ATENUACIÓN BAJA'}
           </span>
           <button
             onClick={cycleCensorship}
@@ -90,11 +78,9 @@ export function CensoredMediaCard({
           alt={altText}
           referrerPolicy="no-referrer"
           className={`w-full h-full object-contain transition-all duration-500 filter ${
-            censorMode === 0
-              ? 'blur-2xl opacity-15'
-              : censorMode === 1
-              ? 'contrast-125 brightness-90 blur-[0.5px]'
-              : 'contrast-110 brightness-95'
+            censorMode === 1
+              ? 'contrast-110 brightness-75 blur-md scale-105'
+              : 'contrast-110 brightness-95 blur-[0.5px]'
           }`}
         />
 
@@ -102,51 +88,7 @@ export function CensoredMediaCard({
         <div className="absolute inset-0 scanlines opacity-50 pointer-events-none" />
         <div className="absolute inset-0 grain-overlay pointer-events-none" />
 
-        {/* ------------------------------------------------------------- */}
-        {/* MODE 0: SENSITIVE CONTENT BLACKOUT (Palette styled) */}
-        {/* ------------------------------------------------------------- */}
-        {censorMode === 0 && (
-          <div className="absolute inset-0 z-20 bg-[#161B20]/95 backdrop-blur-md flex flex-col items-center justify-center p-4 text-center">
-            {/* Animated Eye Icon */}
-            <div className="animate-eye-float mb-3">
-              <svg
-                viewBox="0 0 100 65"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-14 h-14 text-[#DFE4EA] drop-shadow-[0_2px_10px_rgba(223,228,234,0.2)]"
-                aria-hidden="true"
-              >
-                <path d="M 12 32.5 C 24 10, 76 10, 88 32.5 C 76 55, 24 55, 12 32.5 Z" />
-                <circle cx="50" cy="32.5" r="12" className="animate-pupil fill-[#161B20]/60" />
-                <line x1="78" y1="7" x2="22" y2="58" className="animate-slash-twitch stroke-[#8B191F]" />
-              </svg>
-            </div>
-
-            <h4 className="font-sans text-lg font-bold text-[#DFE4EA] mb-1.5 animate-text-glitch">
-              Contenido Sensible
-            </h4>
-
-            <p className="text-xs font-sans text-[#BDC6CE] max-w-xs leading-relaxed mb-4">
-              Esta fotografía contiene material sensible protegido por protocolo de censura visual.
-            </p>
-
-            <button
-              onClick={handleReveal}
-              className="py-1.5 px-6 rounded-xl border-2 border-[#DFE4EA] bg-transparent hover:bg-[#DFE4EA] hover:text-[#161B20] text-[#DFE4EA] font-sans text-xs font-semibold tracking-wide transition-all cursor-pointer animate-btn-pulse flex items-center gap-1.5"
-            >
-              <span>Ver ahora</span>
-              <Eye className="w-3 h-3" />
-            </button>
-          </div>
-        )}
-
-        {/* ------------------------------------------------------------- */}
-        {/* MODE 1 & 2: EXPLICIT VISIBLE CENSORSHIP OVERLAYS */}
-        {/* ------------------------------------------------------------- */}
-        {censorMode !== 0 && (
+        {(
           <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-between p-4">
             {/* Top Red Official Stamp */}
             <div className="flex items-center justify-between">
@@ -161,12 +103,12 @@ export function CensoredMediaCard({
 
             {/* Heavy Censor Bars crossing the center of the photo */}
             <div className="w-full flex flex-col items-center gap-1.5 mt-auto mb-10 sm:mb-14">
-              <div className="w-3/5 sm:w-2/5 py-1 px-3 bg-[#161B20] border border-[#3D4750] shadow-[0_4px_14px_rgba(22,27,32,0.8)] flex items-center justify-center">
+              <div className={`w-3/5 sm:w-2/5 py-1 px-3 border border-[#DFE4EA]/25 shadow-[0_4px_14px_rgba(22,27,32,0.35)] backdrop-blur-sm flex items-center justify-center ${censorMode === 1 ? 'bg-[#161B20]/55' : 'bg-[#161B20]/25'}`}>
                 <span className="font-mono text-[10px] text-[#DFE4EA] font-bold tracking-wide text-center truncate">
                   {censorBarText}
                 </span>
               </div>
-              <div className="w-2/5 sm:w-1/4 py-0.5 bg-[#1C2228] text-center border border-[#2F3339]">
+              <div className={`w-2/5 sm:w-1/4 py-0.5 text-center border border-[#DFE4EA]/15 backdrop-blur-sm ${censorMode === 1 ? 'bg-[#1C2228]/50' : 'bg-[#1C2228]/20'}`}>
                 <span className="font-mono text-[8px] text-[#7D878F] tracking-wide">
                   ████████████████████
                 </span>
@@ -175,8 +117,8 @@ export function CensoredMediaCard({
 
             {/* Bottom bar with Hide button affordance */}
             <div className="flex items-center justify-between pointer-events-auto">
-              <span className="text-[10px] font-mono text-[#BDC6CE] bg-[#161B20]/90 px-2 py-0.5 border border-[#2F3339]">
-                CENSURA VISUAL APLICADA
+              <span className="text-[10px] font-mono text-[#DFE4EA] bg-[#161B20]/45 backdrop-blur-sm px-2 py-0.5 border border-[#DFE4EA]/20">
+                CENSURA DIFUSA APLICADA
               </span>
               <button
                 onClick={handleHide}
