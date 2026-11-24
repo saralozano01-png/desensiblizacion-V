@@ -11,7 +11,8 @@ import { FloatingWarningSystem } from './components/FloatingWarningSystem';
 import { FinalReflection } from './components/FinalReflection';
 import { InitialWarningModal } from './components/InitialWarningModal';
 import { ExitScreen } from './components/ExitScreen';
-import { SensitivityExperience } from './components/SensitivityExperience';
+import { VisualNovelExperience } from './components/VisualNovelExperience';
+import { MediaModulesPending } from './components/MediaModulesPending';
 import { useHabituationTracker } from './hooks/useHabituationTracker';
 
 export default function App() {
@@ -45,7 +46,7 @@ export default function App() {
       }
 
       // Check current section
-      const sections = ['inicio', 'introduccion', 'desarrollo', 'feed', 'referentes-artisticos', 'referentes-teoricos', 'bibliografia', 'reflexion'];
+      const sections = ['inicio', 'introduccion', 'desarrollo', 'multimedia', 'podcast', 'feed', 'referentes-artisticos', 'referentes-teoricos', 'bibliografia', 'reflexion'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -103,7 +104,7 @@ export default function App() {
 
       {/* Mandatory Entry Interaction Modal */}
       <InitialWarningModal
-        isOpen={modalOpen}
+        isOpen={modalOpen && !experienceOpen}
         onAccept={() => setModalOpen(false)}
         onExit={() => setHasExited(true)}
       />
@@ -135,7 +136,7 @@ export default function App() {
         onOpenExperience={() => setExperienceOpen(true)}
       />
 
-      {experienceOpen && <SensitivityExperience onClose={() => setExperienceOpen(false)} />}
+      {experienceOpen && <VisualNovelExperience onClose={() => setExperienceOpen(false)} />}
 
       <main>
         {/* Hero Section */}
@@ -169,6 +170,7 @@ export default function App() {
 
         {/* 4. Referentes artísticos, seguidos por los referentes teóricos. */}
         <ArtReferentsSection />
+        <MediaModulesPending />
         <BlogTimeline
           onArticleRead={() => setFeedInteractions((prev) => prev + 1)}
           onRedactionReveal={() => setRedactionsRevealed((prev) => prev + 1)}

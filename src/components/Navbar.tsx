@@ -32,6 +32,8 @@ export function Navbar({
     { id: 'inicio', label: 'INICIO' },
     { id: 'introduccion', label: 'INTRODUCCIÓN' },
     { id: 'desarrollo', label: 'DESARROLLO' },
+    { id: 'multimedia', label: 'MÓDULO MULTIMEDIAL' },
+    { id: 'podcast', label: 'PODCAST' },
     { id: 'feed', label: 'FEED' },
     { id: 'referentes-artisticos', label: 'REFERENTES ARTÍSTICOS' },
     { id: 'referentes-teoricos', label: 'REFERENTES TEÓRICOS' },
@@ -105,7 +107,6 @@ export function Navbar({
               </button>
             );
           })}
-          <button onClick={onOpenExperience} className="flex items-center gap-1.5 border border-[#8B191F] bg-[#421115]/50 px-2 py-1 text-[#DFE4EA] transition-colors hover:bg-[#8B191F]" aria-label="Abrir experiencia interactiva audiovisual"><Play className="h-3 w-3 fill-current"/> EXPERIENCIA</button>
         </nav>
 
         {/* Zone 3: Actions & Live Intelligent Habituation Meter */}
@@ -191,6 +192,20 @@ export function Navbar({
         </div>
       </div>
 
+      <div className="flex flex-col items-center gap-1.5 border-t border-[#3D4750]/50 px-4 py-3">
+        <button
+          type="button"
+          onClick={() => { setMobileMenuOpen(false); onOpenExperience(); }}
+          className="inline-flex items-center justify-center gap-3 rounded-md border border-[#cf5d65] bg-[#8B191F] px-6 py-3 text-center font-mono text-sm font-bold tracking-wide text-white shadow-[0_0_18px_#8B191F80] transition-colors hover:bg-[#AA252E] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-base"
+        >
+          <Play className="h-4 w-4 shrink-0 fill-current" aria-hidden="true" />
+          EXPERIENCIA INTERACTIVA
+        </button>
+        <p className="text-center font-mono text-xs text-sky-300">
+          Acceso de operador · Clave inicial <strong className="motion-safe:animate-pulse">1905</strong>
+        </p>
+      </div>
+
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-b border-[#3D4750] bg-[#161B20] px-4 py-4 space-y-2">
@@ -222,7 +237,6 @@ export function Navbar({
               <span className="text-[10px] text-[#41474F]">→</span>
             </button>
           ))}
-          <button onClick={() => { onOpenExperience(); setMobileMenuOpen(false); }} className="w-full border border-[#8B191F] bg-[#421115]/50 py-2 px-3 text-left text-sm font-mono text-[#DFE4EA]">▶ EXPERIENCIA INTERACTIVA</button>
         </div>
       )}
     </header>
