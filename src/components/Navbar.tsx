@@ -67,7 +67,7 @@ export function Navbar({
         aria-valuemax={100}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+      <div className="w-full px-4 sm:px-6 min-h-14 py-2 flex items-center gap-4">
         {/* Zone 1: Wordmark / Title */}
         <div className="flex items-center gap-3 shrink-0">
           <button
@@ -82,7 +82,7 @@ export function Navbar({
         </div>
 
         {/* Zone 2: Navigation Links (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-5 text-xs font-mono tracking-wider">
+        <nav className="hidden lg:flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono tracking-wider">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -100,7 +100,7 @@ export function Navbar({
                 )}
                 <span>{link.label}</span>
                 {isActive && (
-                  <span className="absolute -bottom-[15px] left-0 right-0 h-[2px] bg-[#8B191F]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#8B191F]" />
                 )}
               </button>
             );
@@ -109,7 +109,7 @@ export function Navbar({
         </nav>
 
         {/* Zone 3: Actions & Live Intelligent Habituation Meter */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="ml-auto flex items-center gap-3 shrink-0">
           {/* Live Desensitization & Attention Meter */}
           <div
             className={`hidden sm:flex items-center gap-2 border px-2.5 py-1 text-[11px] font-mono transition-colors ${
