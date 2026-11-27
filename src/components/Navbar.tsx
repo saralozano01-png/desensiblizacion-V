@@ -69,7 +69,7 @@ export function Navbar({
         aria-valuemax={100}
       />
 
-      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 min-h-14 py-2 flex items-center justify-between gap-4">
         {/* Zone 1: Wordmark / Title */}
         <div className="flex items-center gap-3 shrink-0">
           <button
@@ -84,7 +84,7 @@ export function Navbar({
         </div>
 
         {/* Zone 2: Navigation Links (Desktop) */}
-        <nav className="hidden min-[1700px]:flex items-center gap-3 text-xs font-mono tracking-wider">
+        <nav className="hidden min-w-0 flex-1 flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-mono tracking-wider md:flex">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -102,7 +102,7 @@ export function Navbar({
                 )}
                 <span>{link.label}</span>
                 {isActive && (
-                  <span className="absolute -bottom-[15px] left-0 right-0 h-[2px] bg-[#8B191F]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#8B191F]" />
                 )}
               </button>
             );
@@ -184,7 +184,7 @@ export function Navbar({
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 min-[1700px]:hidden border border-[#3D4750] bg-[#222830] text-[#DFE4EA] hover:text-white cursor-pointer"
+            className="p-1.5 md:hidden border border-[#3D4750] bg-[#222830] text-[#DFE4EA] hover:text-white cursor-pointer"
             aria-label="Abrir menú"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -208,7 +208,7 @@ export function Navbar({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="min-[1700px]:hidden max-h-[60dvh] overflow-y-auto border-b border-[#3D4750] bg-[#161B20] px-4 py-4 space-y-2">
+        <div className="md:hidden max-h-[60dvh] overflow-y-auto border-b border-[#3D4750] bg-[#161B20] px-4 py-4 space-y-2">
           <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#2A323A] text-xs font-mono">
             <span className="text-[#7D878F]">HABITUACIÓN INTELIGENTE:</span>
             <span
