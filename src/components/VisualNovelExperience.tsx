@@ -12,7 +12,7 @@ export function VisualNovelExperience({ onClose }: { onClose: () => void }) {
       </button>
       <iframe
         title="Umbral: novela gráfica interactiva"
-        src="/novela/index.html"
+        src="/experiencia-interactiva/index.html"
         className="h-full w-full border-0"
         allow="fullscreen"
       />
