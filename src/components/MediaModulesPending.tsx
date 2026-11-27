@@ -58,8 +58,8 @@ export function MediaModulesPending() {
             <PendingBadge />
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-[11rem_minmax(0,1fr)]">
-            <figure className="w-full max-w-44 self-start overflow-hidden border border-[#3D4750] bg-[#1C2228]">
+          <div className="grid gap-5 sm:grid-cols-[12.5rem_minmax(0,1fr)]">
+            <figure className="w-full max-w-[12.5rem] self-start overflow-hidden border border-[#3D4750] bg-[#1C2228]">
               <img src={`${import.meta.env.BASE_URL}podcast/esteban-morales.png`} alt="Retrato de Esteban Morales" width={768} height={1024} loading="lazy" className="h-auto w-full" />
               <figcaption className="px-5 py-3 font-mono text-xs text-[#BDC6CE]">Esteban Morales · Invitado</figcaption>
             </figure>
