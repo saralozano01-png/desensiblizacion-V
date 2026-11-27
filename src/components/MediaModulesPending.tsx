@@ -53,25 +53,26 @@ export function MediaModulesPending() {
             <div>
               <p className="font-mono text-xs font-bold tracking-[0.16em] text-[#8B191F]">APARTADO INDIVIDUAL</p>
               <h2 className="mt-2 font-display text-4xl tracking-wide text-[#DFE4EA] sm:text-5xl">PODCAST</h2>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#BDC6CE]">La entrevista, su ficha de invitado y la transcripción sincronizada aparecerán aquí.</p>
+              <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#BDC6CE]">Entrevista con Esteban Morales sobre violencia y cultura digital.</p>
             </div>
             <PendingBadge />
           </div>
 
           <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-            <article className="flex min-h-80 flex-col justify-between border border-dashed border-[#7D878F] bg-[#1C2228] p-6">
-              <div><ImageIcon className="h-8 w-8 text-[#8B191F]" /><h3 className="mt-6 font-display text-2xl tracking-wide text-[#DFE4EA]">PÓSTER / FOTO DEL INVITADO</h3><p className="mt-2 text-sm leading-relaxed text-[#BDC6CE]">Espacio reservado para la portada del episodio y el retrato del invitado.</p></div>
-              <p className="font-mono text-[11px] tracking-wider text-[#7D878F]">IMAGEN PENDIENTE DE CARGA</p>
-            </article>
+            <figure className="self-start overflow-hidden border border-[#3D4750] bg-[#1C2228]">
+              <img src={`${import.meta.env.BASE_URL}podcast/esteban-morales.png`} alt="Retrato de Esteban Morales" width={768} height={1024} loading="lazy" className="h-auto w-full" />
+              <figcaption className="px-5 py-3 font-mono text-xs text-[#BDC6CE]">Esteban Morales · Invitado</figcaption>
+            </figure>
 
             <div className="space-y-5">
               <article className="border border-[#3D4750] bg-[#1C2228] p-6">
-                <div className="flex items-center gap-3"><Mic className="h-6 w-6 text-[#8B191F]" /><h3 className="font-display text-2xl tracking-wide text-[#DFE4EA]">FICHA DEL INVITADO</h3></div>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  <div className="border border-dashed border-[#41474F] p-4"><p className="font-mono text-[10px] tracking-wider text-[#7D878F]">NOMBRE Y PERFIL</p><p className="mt-2 text-sm text-[#BDC6CE]">Pendiente.</p></div>
-                  <div className="border border-dashed border-[#41474F] p-4"><p className="font-mono text-[10px] tracking-wider text-[#7D878F]">ESTUDIOS Y ENLACES</p><p className="mt-2 text-sm text-[#BDC6CE]">Pendiente.</p></div>
-                </div>
-                <div className="mt-3 flex items-center gap-2 text-sm text-[#7D878F]"><Link2 className="h-4 w-4" /> Página web y publicaciones: pendiente de vincular.</div>
+                <div className="flex items-center gap-3"><Mic className="h-6 w-6 text-[#8B191F]" /><h3 className="font-display text-2xl tracking-wide text-[#DFE4EA]">Esteban Morales</h3></div>
+                <p className="mt-4 text-sm leading-relaxed text-[#BDC6CE]">Profesor e investigador en medios y culturas digitales en la Universidad de Groningen. Estudia cómo las plataformas digitales influyen en la circulación y la experiencia de la violencia.</p>
+                <ul className="mt-4 space-y-2 text-sm text-sky-300">
+                  <li><a href="https://esteban-morales.com/" className="inline-flex items-center gap-2 underline underline-offset-4"><Link2 className="h-4 w-4" /> Sitio profesional</a></li>
+                  <li><a href="https://journals.sagepub.com/doi/full/10.1177/14614448261420823" className="underline underline-offset-4">Estudio sobre violencia en plataformas digitales</a></li>
+                  <li><a href="https://rcientificas.uninorte.edu.co/index.php/investigacion/article/view/15328" className="underline underline-offset-4">Revisión sobre violencia en redes sociales en Colombia</a></li>
+                </ul>
               </article>
 
               <article className="border border-[#3D4750] bg-[#1C2228] p-6">
