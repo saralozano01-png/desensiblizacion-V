@@ -133,7 +133,6 @@ export default function App() {
         behaviorLabel={habituationStats.behaviorLabel}
         scrollSpeed={habituationStats.scrollSpeedPxPerSec}
         onNavigate={handleNavigate}
-        onOpenExperience={() => setExperienceOpen(true)}
       />
 
       {experienceOpen && <VisualNovelExperience onClose={() => setExperienceOpen(false)} />}
@@ -190,6 +189,18 @@ export default function App() {
           slowPauseSeconds={habituationStats.slowPauseSeconds}
           onResetExperience={handleResetExperience}
         />
+        <div className="flex flex-col items-center gap-3 border-t border-[#3D4750] px-4 py-12 text-center">
+          <button
+            type="button"
+            onClick={() => setExperienceOpen(true)}
+            className="rounded-md border border-[#cf5d65] bg-[#8B191F] px-6 py-3 font-mono text-sm font-bold text-white transition-colors hover:bg-[#aa252e] focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            <span aria-hidden="true">▶ </span>EXPERIENCIA INTERACTIVA
+          </button>
+          <p className="font-mono text-sm text-sky-300">
+            Acceso de operador · Clave inicial <strong className="motion-safe:animate-pulse">1905</strong>
+          </p>
+        </div>
       </main>
     </div>
   );
